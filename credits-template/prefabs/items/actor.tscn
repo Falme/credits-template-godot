@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bl7epgfgan4nr"]
+
+[node name="Actor" type="Label"]
+text = "    Aya Kyogoku"
