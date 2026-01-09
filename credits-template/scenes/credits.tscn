@@ -1,18 +1,54 @@
-[gd_scene format=3 uid="uid://do7gek62mdc4e"]
+[gd_scene load_steps=2 format=3 uid="uid://do7gek62mdc4e"]
 
-[node name="Credits" type="Control"]
-layout_mode = 3
-anchors_preset = 15
+[ext_resource type="Script" uid="uid://bn0o3mfx6boe3" path="res://credits-template/scripts/credits.gd" id="1_np21v"]
+
+[node name="CreditsRoll" type="VBoxContainer"]
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+script = ExtResource("1_np21v")
 
-[node name="BackgroundColor" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Animal Crossing : New Horizons
+Development Staff"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 2
+text = "
+
+
+
+"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 2
+text = "Director"
+
+[node name="Label4" type="Label" parent="."]
+layout_mode = 2
+text = "    Aya Kyogoku"
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 2
+text = "
+"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="."]
+layout_mode = 2
+text = "Director"
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 2
+text = "   Aya Kyogoku"
+
+[node name="Label8" type="Label" parent="."]
+layout_mode = 2
+text = "Director"
+
+[node name="Label9" type="Label" parent="."]
+layout_mode = 2
+text = "   Aya Kyogoku"

@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2jaag5vu5uu1"]
+
+[ext_resource type="Texture2D" uid="uid://cuiytewepp0l4" path="res://credits-template/sprites/background.png" id="1_21mbh"]
+[ext_resource type="PackedScene" uid="uid://do7gek62mdc4e" path="res://credits-template/scenes/credits.tscn" id="2_utq03"]
+
+[node name="CreditsExample" type="Node"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(628, 325)
+texture = ExtResource("1_21mbh")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CreditsRoll" parent="Control" instance=ExtResource("2_utq03")]
+layout_mode = 1
+anchor_left = 0.5
+grow_horizontal = 2
+grow_vertical = 2
