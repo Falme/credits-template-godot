@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://do7gek62mdc4e"]
+
+[ext_resource type="Script" uid="uid://bn0o3mfx6boe3" path="res://credits-template/scripts/credits.gd" id="1_np21v"]
+[ext_resource type="PackedScene" uid="uid://dh2nk4w2xadb7" path="res://credits-template/prefabs/items/title.tscn" id="2_fdcby"]
+[ext_resource type="PackedScene" uid="uid://c7jyj5f0o3eeh" path="res://credits-template/prefabs/items/spacing.tscn" id="3_nd6c6"]
+[ext_resource type="PackedScene" uid="uid://b7wlj4qgyyyah" path="res://credits-template/prefabs/items/category.tscn" id="4_o5f3d"]
+[ext_resource type="PackedScene" uid="uid://bl7epgfgan4nr" path="res://credits-template/prefabs/items/actor.tscn" id="5_6me0r"]
+
+[node name="CreditsRoll" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_np21v")
+
+[node name="Title" parent="." instance=ExtResource("2_fdcby")]
+layout_mode = 2
+
+[node name="Spacing" parent="." instance=ExtResource("3_nd6c6")]
+layout_mode = 2
+
+[node name="Category" parent="." instance=ExtResource("4_o5f3d")]
+layout_mode = 2
+
+[node name="Actor" parent="." instance=ExtResource("5_6me0r")]
+layout_mode = 2
+
+[node name="Label5" type="Label" parent="."]
+layout_mode = 2
+text = "
+"
+horizontal_alignment = 1
+
+[node name="Label7" type="Label" parent="."]
+layout_mode = 2
+text = "Director"
+
+[node name="Label6" type="Label" parent="."]
+layout_mode = 2
+text = "   Aya Kyogoku"
+
+[node name="Label8" type="Label" parent="."]
+layout_mode = 2
+text = "Director"
+
+[node name="Label9" type="Label" parent="."]
+layout_mode = 2
+text = "   Aya Kyogoku"
