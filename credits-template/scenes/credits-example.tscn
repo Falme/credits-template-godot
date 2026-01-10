@@ -25,10 +25,11 @@ grow_vertical = 2
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-offset_top = 1080.0
-offset_bottom = 1080.0
+offset_top = 172.32576
+offset_bottom = 172.37585
 grow_horizontal = 2
 grow_vertical = 2
+velocity = 100.0
 
 [node name="Label10" type="Label" parent="Control/CreditsRoll"]
 layout_mode = 2
