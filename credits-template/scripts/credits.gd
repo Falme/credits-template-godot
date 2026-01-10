@@ -1,14 +1,11 @@
 @tool
-extends Node
+class_name Credits
+extends VBoxContainer
 
-@export_tool_button("Hello", "Callable") var hello_action = hello
 @export_tool_button("Start Credits", "Callable") var roll_credits_action : Callable = start_credits
 
-func hello():
-	print("Hello world!")
-	print($Label2.owner)
-
 func start_credits():
+	scroll_to_start()
 	print("Hello world!")
 
 func _ready() -> void:
@@ -16,3 +13,9 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	pass
+
+func scroll_at(_y : float) -> void:
+	self.position.y = _y
+
+func scroll_to_start() -> void:
+	self.position.y = DisplayServer.screen_get_size().y

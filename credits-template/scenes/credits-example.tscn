@@ -9,7 +9,8 @@
 [node name="CreditsExample" type="Node"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(628, 325)
+position = Vector2(1032.4445, 552.5)
+scale = Vector2(1.6319444, 1.6319444)
 texture = ExtResource("1_21mbh")
 
 [node name="Control" type="Control" parent="."]
@@ -24,6 +25,8 @@ grow_vertical = 2
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
+offset_top = 1080.0
+offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
 
