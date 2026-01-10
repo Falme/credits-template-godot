@@ -1,16 +1,19 @@
-[gd_scene load_steps=6 format=3 uid="uid://do7gek62mdc4e"]
+[gd_scene load_steps=7 format=3 uid="uid://do7gek62mdc4e"]
 
 [ext_resource type="Script" uid="uid://bn0o3mfx6boe3" path="res://credits-template/scripts/credits.gd" id="1_np21v"]
 [ext_resource type="PackedScene" uid="uid://dh2nk4w2xadb7" path="res://credits-template/prefabs/items/title.tscn" id="2_fdcby"]
 [ext_resource type="PackedScene" uid="uid://c7jyj5f0o3eeh" path="res://credits-template/prefabs/items/spacing.tscn" id="3_nd6c6"]
 [ext_resource type="PackedScene" uid="uid://b7wlj4qgyyyah" path="res://credits-template/prefabs/items/category.tscn" id="4_o5f3d"]
 [ext_resource type="PackedScene" uid="uid://bl7epgfgan4nr" path="res://credits-template/prefabs/items/actor.tscn" id="5_6me0r"]
+[ext_resource type="PackedScene" uid="uid://cm7lkn1487awy" path="res://credits-template/prefabs/items/end.tscn" id="6_nd6c6"]
 
-[node name="CreditsRoll" type="VBoxContainer"]
+[node name="CreditsRoll" type="VBoxContainer" node_paths=PackedStringArray("end_node")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource("1_np21v")
+velocity = null
+end_node = NodePath("End")
 
 [node name="Title" parent="." instance=ExtResource("2_fdcby")]
 layout_mode = 2
@@ -42,6 +45,5 @@ text = "   Aya Kyogoku"
 layout_mode = 2
 text = "Director"
 
-[node name="Label9" type="Label" parent="."]
+[node name="End" parent="." instance=ExtResource("6_nd6c6")]
 layout_mode = 2
-text = "   Aya Kyogoku"

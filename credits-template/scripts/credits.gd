@@ -7,6 +7,7 @@ extends VBoxContainer
 
 var _isScrolling : bool = false
 @export var velocity : float
+@export var end_node : Control
 
 func start_credits():
 	scroll_to_start()
@@ -23,6 +24,8 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if(_isScrolling):
 		scroll(_delta)
+		if(end_node.global_position.y < 0):
+			_isScrolling = false
 
 func scroll_at(_y : float) -> void:
 	self.position.y = _y

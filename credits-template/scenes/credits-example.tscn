@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2jaag5vu5uu1"]
+[gd_scene load_steps=5 format=3 uid="uid://c2jaag5vu5uu1"]
 
 [ext_resource type="Texture2D" uid="uid://cuiytewepp0l4" path="res://credits-template/sprites/background.png" id="1_21mbh"]
 [ext_resource type="PackedScene" uid="uid://do7gek62mdc4e" path="res://credits-template/prefabs/credits.tscn" id="2_utq03"]
 [ext_resource type="PackedScene" uid="uid://c7jyj5f0o3eeh" path="res://credits-template/prefabs/items/spacing.tscn" id="3_b105y"]
-[ext_resource type="PackedScene" uid="uid://b7wlj4qgyyyah" path="res://credits-template/prefabs/items/category.tscn" id="4_g5qq2"]
 [ext_resource type="PackedScene" uid="uid://bl7epgfgan4nr" path="res://credits-template/prefabs/items/actor.tscn" id="5_kga43"]
 
 [node name="CreditsExample" type="Node"]
@@ -25,20 +24,13 @@ grow_vertical = 2
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-offset_top = 172.32576
-offset_bottom = 172.37585
+offset_top = -1466.1527
+offset_bottom = -1466.0931
 grow_horizontal = 2
 grow_vertical = 2
 velocity = 100.0
 
-[node name="Label10" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "   Aya Kyogoku"
-
 [node name="Spacing2" parent="Control/CreditsRoll" instance=ExtResource("3_b105y")]
-layout_mode = 2
-
-[node name="Category2" parent="Control/CreditsRoll" instance=ExtResource("4_g5qq2")]
 layout_mode = 2
 
 [node name="Actor2" parent="Control/CreditsRoll" instance=ExtResource("5_kga43")]
