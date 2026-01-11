@@ -41,7 +41,3 @@ text = "   Aya Kyogoku"
 [node name="Label8" type="Label" parent="."]
 layout_mode = 2
 text = "Director"
-
-[node name="Label9" type="Label" parent="."]
-layout_mode = 2
-text = "   Aya Kyogoku"
