@@ -1,10 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2jaag5vu5uu1"]
+[gd_scene load_steps=3 format=3 uid="uid://c2jaag5vu5uu1"]
 
 [ext_resource type="Texture2D" uid="uid://cuiytewepp0l4" path="res://credits-template/sprites/background.png" id="1_21mbh"]
 [ext_resource type="PackedScene" uid="uid://do7gek62mdc4e" path="res://credits-template/prefabs/credits.tscn" id="2_utq03"]
-[ext_resource type="PackedScene" uid="uid://c7jyj5f0o3eeh" path="res://credits-template/prefabs/items/spacing.tscn" id="3_b105y"]
-[ext_resource type="PackedScene" uid="uid://cm7lkn1487awy" path="res://credits-template/prefabs/items/end.tscn" id="5_b105y"]
-[ext_resource type="PackedScene" uid="uid://bl7epgfgan4nr" path="res://credits-template/prefabs/items/actor.tscn" id="5_kga43"]
 
 [node name="CreditsExample" type="Node"]
 
@@ -25,139 +22,10 @@ grow_vertical = 2
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-offset_top = -2606.2883
-offset_bottom = -1696.2883
+offset_top = -17801.938
+offset_bottom = -16891.926
 grow_horizontal = 2
 grow_vertical = 2
 velocity = 100.0
-
-[node name="Spacing2" parent="Control/CreditsRoll" instance=ExtResource("3_b105y")]
-layout_mode = 2
-
-[node name="Actor2" parent="Control/CreditsRoll" instance=ExtResource("5_kga43")]
-layout_mode = 2
-
-[node name="Label9" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "
-"
-horizontal_alignment = 1
-
-[node name="Label10" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "Director"
-
-[node name="Label11" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "   Aya Kyogoku"
-
-[node name="Label12" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "Director"
-
-[node name="Spacing3" parent="Control/CreditsRoll" instance=ExtResource("3_b105y")]
-layout_mode = 2
-
-[node name="Actor3" parent="Control/CreditsRoll" instance=ExtResource("5_kga43")]
-layout_mode = 2
-
-[node name="Label13" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "
-"
-horizontal_alignment = 1
-
-[node name="Label14" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "Director"
-
-[node name="Label15" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "   Aya Kyogoku"
-
-[node name="Label16" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "Director"
-
-[node name="Spacing4" parent="Control/CreditsRoll" instance=ExtResource("3_b105y")]
-layout_mode = 2
-
-[node name="Actor4" parent="Control/CreditsRoll" instance=ExtResource("5_kga43")]
-layout_mode = 2
-
-[node name="Label17" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "
-"
-horizontal_alignment = 1
-
-[node name="Label18" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "Director"
-
-[node name="Label19" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "   Aya Kyogoku"
-
-[node name="Label20" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "Director"
-
-[node name="Spacing5" parent="Control/CreditsRoll" instance=ExtResource("3_b105y")]
-layout_mode = 2
-
-[node name="Actor5" parent="Control/CreditsRoll" instance=ExtResource("5_kga43")]
-layout_mode = 2
-
-[node name="Label21" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "
-"
-horizontal_alignment = 1
-
-[node name="Label22" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "Director"
-
-[node name="Label23" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "   Aya Kyogoku"
-
-[node name="Label24" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "Director"
-
-[node name="Spacing6" parent="Control/CreditsRoll" instance=ExtResource("3_b105y")]
-layout_mode = 2
-
-[node name="Actor6" parent="Control/CreditsRoll" instance=ExtResource("5_kga43")]
-layout_mode = 2
-
-[node name="Label25" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "
-"
-horizontal_alignment = 1
-
-[node name="Label26" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "Director"
-
-[node name="Label27" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "   Aya Kyogoku"
-
-[node name="Label28" type="Label" parent="Control/CreditsRoll"]
-layout_mode = 2
-text = "Director"
-
-[node name="Spacing7" parent="Control/CreditsRoll" instance=ExtResource("3_b105y")]
-layout_mode = 2
-
-[node name="Actor7" parent="Control/CreditsRoll" instance=ExtResource("5_kga43")]
-layout_mode = 2
-
-[node name="End" parent="Control/CreditsRoll" instance=ExtResource("5_b105y")]
-layout_mode = 2
 
 [editable path="Control/CreditsRoll"]
