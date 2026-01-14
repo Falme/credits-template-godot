@@ -1,0 +1,47 @@
+{
+	"version": "0.0.1",
+	"velocity": 300.0,
+	"title": "Animal Crossing : New Horizons\nDevelopment Staff",
+	"labels": [
+		[
+			"Director",
+			"Aya Kyogoku",
+			"Aya Kyogoku",
+			"Jane Doe"
+		],
+		[
+			"Sub Director",
+			"Aya Kyogoku",
+			"Aya Kyogoku",
+			"Jane Doe"
+		]
+	],
+	"credits": [
+		{
+			"label": "Animal Crossing : New Horizons\nDevelopment Staff",
+			"title": true
+		},
+		{
+			"label": "",
+			"space": 10.0
+		},
+		{
+			"label": "Director",
+			"category": true,
+			"actors": [
+				"Aya Kyogoku",
+				"John Doe",
+				"Jane Doe"
+			]
+		},
+		{
+			"label": "Director",
+			"category": true,
+			"actors": [
+				"Aya Kyogoku",
+				"John Doe",
+				"Jane Doe"
+			]
+		}
+	]
+}
