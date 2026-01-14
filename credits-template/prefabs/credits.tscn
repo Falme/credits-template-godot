@@ -20,6 +20,8 @@ credits_data = ExtResource("2_o5f3d")
 layout_mode = 2
 script = ExtResource("3_6me0r")
 label_title = ExtResource("2_fdcby")
+label_category = ExtResource("4_o5f3d")
+label_actor = ExtResource("5_6me0r")
 
 [node name="Title" parent="CreditsStaff" instance=ExtResource("2_fdcby")]
 layout_mode = 2
