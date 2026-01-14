@@ -19,9 +19,10 @@ func write_title(title : String) -> void:
 func write_staff(staff : Array) -> void:
 	for category in staff:
 		write_category(category[0])
+		await get_tree().process_frame
 		for actor in range(1, category.size()):
 			write_actor(category[actor])
-
+			await get_tree().process_frame
 
 func write_category(category : String) -> void:
 	var instance = label_category.instantiate()
