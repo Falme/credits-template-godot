@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://do7gek62mdc4e"]
+[gd_scene load_steps=9 format=3 uid="uid://do7gek62mdc4e"]
 
 [ext_resource type="Script" uid="uid://bn0o3mfx6boe3" path="res://credits-template/scripts/credits.gd" id="1_np21v"]
 [ext_resource type="PackedScene" uid="uid://dh2nk4w2xadb7" path="res://credits-template/prefabs/items/title.tscn" id="2_fdcby"]
+[ext_resource type="JSON" path="res://credits-template/data/credits.json" id="2_o5f3d"]
+[ext_resource type="Script" uid="uid://p1ad18h0os0e" path="res://credits-template/scripts/credits_staff.gd" id="3_6me0r"]
 [ext_resource type="PackedScene" uid="uid://c7jyj5f0o3eeh" path="res://credits-template/prefabs/items/spacing.tscn" id="3_nd6c6"]
 [ext_resource type="PackedScene" uid="uid://b7wlj4qgyyyah" path="res://credits-template/prefabs/items/category.tscn" id="4_o5f3d"]
 [ext_resource type="PackedScene" uid="uid://bl7epgfgan4nr" path="res://credits-template/prefabs/items/actor.tscn" id="5_6me0r"]
@@ -12,45 +14,48 @@ anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource("1_np21v")
+credits_data = ExtResource("2_o5f3d")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="CreditsStaff" type="VBoxContainer" parent="."]
+layout_mode = 2
+script = ExtResource("3_6me0r")
+label_title = ExtResource("2_fdcby")
+
+[node name="Title" parent="CreditsStaff" instance=ExtResource("2_fdcby")]
 layout_mode = 2
 
-[node name="Title" parent="VBoxContainer" instance=ExtResource("2_fdcby")]
+[node name="Spacing" parent="CreditsStaff" instance=ExtResource("3_nd6c6")]
 layout_mode = 2
 
-[node name="Spacing" parent="VBoxContainer" instance=ExtResource("3_nd6c6")]
+[node name="Category" parent="CreditsStaff" instance=ExtResource("4_o5f3d")]
 layout_mode = 2
 
-[node name="Category" parent="VBoxContainer" instance=ExtResource("4_o5f3d")]
+[node name="Actor" parent="CreditsStaff" instance=ExtResource("5_6me0r")]
 layout_mode = 2
 
-[node name="Actor" parent="VBoxContainer" instance=ExtResource("5_6me0r")]
-layout_mode = 2
-
-[node name="Label5" type="Label" parent="VBoxContainer"]
+[node name="Label5" type="Label" parent="CreditsStaff"]
 layout_mode = 2
 text = "
 "
 horizontal_alignment = 1
 
-[node name="Label7" type="Label" parent="VBoxContainer"]
+[node name="Label7" type="Label" parent="CreditsStaff"]
 layout_mode = 2
 text = "Director"
 
-[node name="Label6" type="Label" parent="VBoxContainer"]
+[node name="Label6" type="Label" parent="CreditsStaff"]
 layout_mode = 2
 text = "   Aya Kyogoku"
 
-[node name="Label8" type="Label" parent="VBoxContainer"]
+[node name="Label8" type="Label" parent="CreditsStaff"]
 layout_mode = 2
 text = "Director"
 
-[node name="Label9" type="Label" parent="VBoxContainer"]
+[node name="Label9" type="Label" parent="CreditsStaff"]
 layout_mode = 2
 text = "Director"
 
-[node name="Label10" type="Label" parent="VBoxContainer"]
+[node name="Label10" type="Label" parent="CreditsStaff"]
 layout_mode = 2
 text = "Director"
 

@@ -5,6 +5,7 @@ extends VBoxContainer
 signal credits_finished
 
 @export var velocity : float
+@export var credits_data : Resource
 var _isScrolling : bool = false
 
 # Editor Buttons for Debug
@@ -21,6 +22,8 @@ func stop_credits():
 # Script methods
 func _ready() -> void:
 	$End.end_reached.connect(credits_ended)
+	
+	$CreditsStaff.load_data(credits_data.data)
 
 	scroll_to_start()
 	start_scrolling()
