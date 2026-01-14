@@ -6,6 +6,8 @@ extends VBoxContainer
 @export var label_actor : PackedScene
 
 func load_data(data : Dictionary) -> void:
+	clear_credits()
+
 	write_title(data.title)
 	write_staff(data.labels)
 
@@ -30,3 +32,8 @@ func write_actor(actor : String) -> void:
 	var instance = label_actor.instantiate()
 	instance.text = actor 
 	add_child(instance)
+
+func clear_credits() -> void:
+	var children = get_children()
+	for child in children:
+		child.free()
