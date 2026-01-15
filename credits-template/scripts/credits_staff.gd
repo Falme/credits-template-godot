@@ -9,29 +9,30 @@ func load_data(data : Dictionary) -> void:
 	clear_credits()
 
 	write_title(data.title)
-	write_staff(data.labels)
+	write_staff(data.items)
 
 func write_title(title : String) -> void:
 	var instance = label_title.instantiate()
 	instance.text = title
 	add_child(instance)
 
-func write_staff(staff : Array) -> void:
-	for category in staff:
-		write_category(category[0])
-		await get_tree().process_frame
-		for actor in range(1, category.size()):
-			write_actor(category[actor])
-			await get_tree().process_frame
+func write_staff(items : Array) -> void:
+	for item in items:
+		if (item.has("category")):
+			write_category(item)
+		if (item.has("actor")):
+			write_actor(item)
 
-func write_category(category : String) -> void:
+		await get_tree().process_frame
+
+func write_category(category : Dictionary) -> void:
 	var instance = label_category.instantiate()
-	instance.text = category 
+	instance.text = category.text
 	add_child(instance)
 
-func write_actor(actor : String) -> void:
+func write_actor(actor : Dictionary) -> void:
 	var instance = label_actor.instantiate()
-	instance.text = actor 
+	instance.text = actor.text 
 	add_child(instance)
 
 func clear_credits() -> void:
