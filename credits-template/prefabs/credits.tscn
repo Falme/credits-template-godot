@@ -22,6 +22,7 @@ script = ExtResource("3_6me0r")
 label_title = ExtResource("2_fdcby")
 label_category = ExtResource("4_o5f3d")
 label_actor = ExtResource("5_6me0r")
+label_spacing = ExtResource("3_nd6c6")
 
 [node name="Title" parent="CreditsStaff" instance=ExtResource("2_fdcby")]
 layout_mode = 2

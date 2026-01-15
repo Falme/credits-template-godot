@@ -4,34 +4,43 @@ extends VBoxContainer
 @export var label_title : PackedScene
 @export var label_category : PackedScene
 @export var label_actor : PackedScene
+@export var label_spacing : PackedScene
 
 func load_data(data : Dictionary) -> void:
 	clear_credits()
 
 	write_title(data.title)
-	write_staff(data.labels)
+	write_staff(data.items)
 
 func write_title(title : String) -> void:
 	var instance = label_title.instantiate()
 	instance.text = title
 	add_child(instance)
 
-func write_staff(staff : Array) -> void:
-	for category in staff:
-		write_category(category[0])
-		await get_tree().process_frame
-		for actor in range(1, category.size()):
-			write_actor(category[actor])
-			await get_tree().process_frame
+func write_staff(items : Array) -> void:
+	for item in items:
+		if (item.has("category")):
+			write_category(item)
+		if (item.has("actor")):
+			write_actor(item)
+		if (item.has("space")):
+			write_space(item)
 
-func write_category(category : String) -> void:
-	var instance = label_category.instantiate()
-	instance.text = category 
+		await get_tree().process_frame
+
+func write_category(category : Dictionary) -> void:
+	var instance : Label = label_category.instantiate()
+	instance.text = category.text
 	add_child(instance)
 
-func write_actor(actor : String) -> void:
-	var instance = label_actor.instantiate()
-	instance.text = actor 
+func write_actor(actor : Dictionary) -> void:
+	var instance : Label = label_actor.instantiate()
+	instance.text = actor.text 
+	add_child(instance)
+
+func write_space(space : Dictionary) -> void:
+	var instance : Control = label_spacing.instantiate()
+	instance.custom_minimum_size.y = space.height
 	add_child(instance)
 
 func clear_credits() -> void:
