@@ -29,6 +29,7 @@ Para explicar rapidamente cada campo:
 - title: Título da cena de créditos, normalmente o nome do jogo
 - category: Categoria ou nome do cargo (exemplo: Produtores)
 - actors: Nome da pessoa a ser listada (exemplo: Jane Doe)
+- spacing : Margem/espaço entre nomes e funções
 
 Na próxima seção, explicaremos em mais detalhes a estrutura JSON.
 
@@ -38,19 +39,21 @@ Vou escrever um exemplo de créditos e explicar cada um deles com mais detalhes.
 
 ```json
 {
-	"velocity": 100.0,
+	"velocity": 300,
 	"title": "Super Jump Game 2: Electric Boogaloo",
-	"labels": [
-		[
-			"Directors",
-			"John Doe",
-		],
-		[
-			"Producers",
-			"Jane Doe"
-			"Joe Mama",
-			"Oscar Garlic"
-		]
+	"items": [
+		{"space": true, "height": 400},
+		{"category": true, "text": "Director"},
+		{"actor": true, "text": "Aya Kyogoku"},
+		{"actor": true, "text": "John Doe"},
+		{"actor": true, "text": "Jane Doe"},
+		{"space": true, "height": 200},
+		{"category": true, "text": "Producers"},
+		{"actor": true, "text": "John Doe"},
+		{"actor": true, "text": "Jane Doe"},
+		{"space": true, "height": 100},
+		{"actor": true, "text": "Oscar Garlic"},
+		{"actor": true, "text": "Aya Kyogoku"},
 	]
 }
 ```
@@ -59,9 +62,8 @@ Explicaremos cada campo de cima para baixo.
 
 - velocity: Velocidade de rolagem dos créditos, velocidade de movimento
 - title: Primeiro campo dos créditos, normalmente o nome do jogo
-- labels: Pessoas que trabalharam no projeto e suas funções
-    - Primeiro campo: Categoria, título do cargo
-    - Outros campos: Nomes das pessoas que trabalharam no projeto na função especificada acima.
-
-
+- items: Pessoas que trabalharam no projeto e suas funções
+    - space: espaço vazio, uma margem entre um texto e outro
+    - category: o título do cargo
+    - actor: Nomes daqueles que trabalharam no projeto na função especificada acima.
 
