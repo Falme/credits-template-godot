@@ -1,9 +1,6 @@
 [gd_scene format=3 uid="uid://c7jyj5f0o3eeh"]
 
-[node name="Spacing" type="Label"]
-text = "
-
-
-
-"
-horizontal_alignment = 1
+[node name="Spacing" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_bottom = 127.0

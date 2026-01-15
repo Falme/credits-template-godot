@@ -2,46 +2,18 @@
 	"version": "0.0.1",
 	"velocity": 300.0,
 	"title": "Animal Crossing : New Horizons\nDevelopment Staff",
-	"labels": [
-		[
-			"Director",
-			"Aya Kyogoku",
-			"Aya Kyogoku",
-			"Jane Doe"
-		],
-		[
-			"Sub Director",
-			"Aya Kyogoku",
-			"Aya Kyogoku",
-			"Jane Doe"
-		]
-	],
-	"credits": [
-		{
-			"label": "Animal Crossing : New Horizons\nDevelopment Staff",
-			"title": true
-		},
-		{
-			"label": "",
-			"space": 10.0
-		},
-		{
-			"label": "Director",
-			"category": true,
-			"actors": [
-				"Aya Kyogoku",
-				"John Doe",
-				"Jane Doe"
-			]
-		},
-		{
-			"label": "Director",
-			"category": true,
-			"actors": [
-				"Aya Kyogoku",
-				"John Doe",
-				"Jane Doe"
-			]
-		}
+	"items": [
+		{"space": true, "height": 400},
+		{"category": true, "text": "Director"},
+		{"actor": true, "text": "Aya Kyogoku"},
+		{"actor": true, "text": "John Doe"},
+		{"actor": true, "text": "Jane Doe"},
+		{"space": true, "height": 200},
+		{"category": true, "text": "Producers"},
+		{"actor": true, "text": "John Doe"},
+		{"actor": true, "text": "Jane Doe"},
+		{"space": true, "height": 100},
+		{"actor": true, "text": "Oscar Garlic"},
+		{"actor": true, "text": "Aya Kyogoku"},
 	]
 }

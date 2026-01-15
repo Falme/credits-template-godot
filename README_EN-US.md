@@ -29,6 +29,7 @@ To quick explain each field:
 - title : Title of the credits scene, normally the name of the game
 - category : Category or Job name (example: Producers)
 - actors : Name of the person to be listed (example: Jane Doe)
+- spacing : Margin/space between names and roles
 
 The next section we will be explaining in more details the JSON structure.
 
@@ -38,19 +39,21 @@ I will write down an example of credits, and explain with more details each one 
 
 ```json
 {
-	"velocity": 100.0,
+	"velocity": 300,
 	"title": "Super Jump Game 2: Electric Boogaloo",
-	"labels": [
-		[
-			"Directors",
-			"John Doe",
-		],
-		[
-			"Producers",
-			"Jane Doe"
-			"Joe Mama",
-			"Oscar Garlic"
-		]
+	"items": [
+		{"space": true, "height": 400},
+		{"category": true, "text": "Director"},
+		{"actor": true, "text": "Aya Kyogoku"},
+		{"actor": true, "text": "John Doe"},
+		{"actor": true, "text": "Jane Doe"},
+		{"space": true, "height": 200},
+		{"category": true, "text": "Producers"},
+		{"actor": true, "text": "John Doe"},
+		{"actor": true, "text": "Jane Doe"},
+		{"space": true, "height": 100},
+		{"actor": true, "text": "Oscar Garlic"},
+		{"actor": true, "text": "Aya Kyogoku"},
 	]
 }
 ```
@@ -59,8 +62,8 @@ From top to bottom, we will explain each field.
 
 - velocity : Velocity of the credits scrolling, speed of movement
 - title : First field of credits, normally the name of the game
-- labels : People that worked in the project and their roles
-    - First Field : Category, the role title
-    - Other Fields : Names, those who worked in the project at the specific role above
-
+- items : People that worked in the project and their roles
+    - space : empty space, a margin between a label and other label
+    - category : the role title
+    - actor : Names, those who worked in the project at the specific role above
 
