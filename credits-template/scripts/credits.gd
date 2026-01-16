@@ -4,8 +4,8 @@ extends VBoxContainer
 
 signal credits_finished
 
-@export var velocity : float
 @export var credits_data : Resource
+var _velocity : float
 var _isScrolling : bool = false
 
 # Editor Buttons for Debug
@@ -25,6 +25,8 @@ func _ready() -> void:
 	
 	$CreditsStaff.load_data(credits_data.data)
 
+	_velocity = credits_data.data["velocity"]
+
 	scroll_to_start()
 	start_scrolling()
 
@@ -39,7 +41,7 @@ func scroll_to_start() -> void:
 	self.position.y = DisplayServer.screen_get_size().y
 
 func scroll(delta: float) -> void:
-	self.position.y += (-velocity * delta)
+	self.position.y += (-_velocity * delta)
 
 func start_scrolling() -> void:
 	_isScrolling = true

@@ -8,7 +8,7 @@ extends VBoxContainer
 @export var label_image : PackedScene
 
 func load_data(data : Dictionary) -> void:
-	clear_credits()
+	clear()
 
 	write_title(data.title)
 	write_staff(data.items)
@@ -58,7 +58,7 @@ func write_image(image : Dictionary) -> void:
 	instance.custom_minimum_size.y = image.height
 	add_child(instance)
 
-func clear_credits() -> void:
+func clear() -> void:
 	var children = get_children()
 	for child in children:
 		child.free()
