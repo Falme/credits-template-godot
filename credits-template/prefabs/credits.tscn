@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://do7gek62mdc4e"]
+[gd_scene load_steps=10 format=3 uid="uid://do7gek62mdc4e"]
 
 [ext_resource type="Script" uid="uid://bn0o3mfx6boe3" path="res://credits-template/scripts/credits.gd" id="1_np21v"]
 [ext_resource type="PackedScene" uid="uid://dh2nk4w2xadb7" path="res://credits-template/prefabs/items/title.tscn" id="2_fdcby"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b7wlj4qgyyyah" path="res://credits-template/prefabs/items/category.tscn" id="4_o5f3d"]
 [ext_resource type="PackedScene" uid="uid://bl7epgfgan4nr" path="res://credits-template/prefabs/items/actor.tscn" id="5_6me0r"]
 [ext_resource type="PackedScene" uid="uid://cm7lkn1487awy" path="res://credits-template/prefabs/items/end.tscn" id="6_nd6c6"]
+[ext_resource type="PackedScene" uid="uid://dxmwoaqjqswpl" path="res://credits-template/prefabs/items/image.tscn" id="8_q2ve6"]
 
 [node name="CreditsRoll" type="VBoxContainer"]
 anchors_preset = 15
@@ -41,6 +42,10 @@ layout_mode = 2
 text = "
 "
 horizontal_alignment = 1
+
+[node name="Image" parent="CreditsStaff" instance=ExtResource("8_q2ve6")]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
 
 [node name="Label7" type="Label" parent="CreditsStaff"]
 layout_mode = 2
