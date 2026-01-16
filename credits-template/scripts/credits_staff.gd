@@ -5,6 +5,7 @@ extends VBoxContainer
 @export var label_category : PackedScene
 @export var label_actor : PackedScene
 @export var label_spacing : PackedScene
+@export var label_image : PackedScene
 
 func load_data(data : Dictionary) -> void:
 	clear_credits()
@@ -25,6 +26,8 @@ func write_staff(items : Array) -> void:
 			write_actor(item)
 		if (item.has("space")):
 			write_space(item)
+		if (item.has("image")):
+			write_image(item)
 
 		await get_tree().process_frame
 
@@ -41,6 +44,12 @@ func write_actor(actor : Dictionary) -> void:
 func write_space(space : Dictionary) -> void:
 	var instance : Control = label_spacing.instantiate()
 	instance.custom_minimum_size.y = space.height
+	add_child(instance)
+
+func write_image(image : Dictionary) -> void:
+	var instance : TextureRect = label_image.instantiate()
+	instance.texture = load("res://"+image.path)
+	instance.custom_minimum_size.y = image.height
 	add_child(instance)
 
 func clear_credits() -> void:

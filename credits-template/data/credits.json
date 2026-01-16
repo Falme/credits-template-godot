@@ -3,17 +3,63 @@
 	"velocity": 300.0,
 	"title": "Animal Crossing : New Horizons\nDevelopment Staff",
 	"items": [
-		{"space": true, "height": 400},
-		{"category": true, "text": "Director"},
-		{"actor": true, "text": "Aya Kyogoku"},
-		{"actor": true, "text": "John Doe"},
-		{"actor": true, "text": "Jane Doe"},
-		{"space": true, "height": 200},
-		{"category": true, "text": "Producers"},
-		{"actor": true, "text": "John Doe"},
-		{"actor": true, "text": "Jane Doe"},
-		{"space": true, "height": 100},
-		{"actor": true, "text": "Oscar Garlic"},
-		{"actor": true, "text": "Aya Kyogoku"},
+		{
+			"image": true,
+			"path": "icon.svg",
+			"height": 400.0
+		},
+		{
+			"space": true,
+			"height": 400.0
+		},
+		{
+			"category": true,
+			"text": "Director"
+		},
+		{
+			"actor": true,
+			"text": "Aya Kyogoku"
+		},
+		{
+			"actor": true,
+			"text": "John Doe"
+		},
+		{
+			"actor": true,
+			"text": "Jane Doe"
+		},
+		{
+			"image": true,
+			"path": "credits-template/sprites/example_image.png",
+			"height": 400.0
+		},
+		{
+			"space": true,
+			"height": 200.0
+		},
+		{
+			"category": true,
+			"text": "Producers"
+		},
+		{
+			"actor": true,
+			"text": "John Doe"
+		},
+		{
+			"actor": true,
+			"text": "Jane Doe"
+		},
+		{
+			"space": true,
+			"height": 100.0
+		},
+		{
+			"actor": true,
+			"text": "Oscar Garlic"
+		},
+		{
+			"actor": true,
+			"text": "Aya Kyogoku"
+		}
 	]
 }
