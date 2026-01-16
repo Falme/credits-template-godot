@@ -13,10 +13,10 @@
 			"height": 400.0
 		},
 		{
-			"category": true, 
-			"text": "Director", 
-			"categorySpacing": 100,
-			"actorsSpacing": 50,
+			"category": true,
+			"text": "Director",
+			"categorySpacing": 100.0,
+			"actorsSpacing": 50.0,
 			"actors": [
 				"John Doe",
 				"Jane Doe",
@@ -33,10 +33,10 @@
 			"height": 200.0
 		},
 		{
-			"category": true, 
-			"text": "Producers", 
-			"categorySpacing": 100,
-			"actorsSpacing": 10,
+			"category": true,
+			"text": "Producers",
+			"categorySpacing": 100.0,
+			"actorsSpacing": 10.0,
 			"actors": [
 				"John Doe",
 				"Jane Doe",
