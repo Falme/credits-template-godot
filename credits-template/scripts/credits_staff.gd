@@ -22,8 +22,6 @@ func write_staff(items : Array) -> void:
 	for item in items:
 		if (item.has("category")):
 			write_category(item)
-		if (item.has("actor")):
-			write_actor(item)
 		if (item.has("space")):
 			write_space(item)
 		if (item.has("image")):
@@ -36,9 +34,12 @@ func write_category(category : Dictionary) -> void:
 	instance.text = category.text
 	add_child(instance)
 
-func write_actor(actor : Dictionary) -> void:
+	for actor in category.actors:
+		write_actor(actor)
+
+func write_actor(actor : String) -> void:
 	var instance : Label = label_actor.instantiate()
-	instance.text = actor.text 
+	instance.text = actor 
 	add_child(instance)
 
 func write_space(space : Dictionary) -> void:
