@@ -23,7 +23,7 @@ func write_staff(items : Array) -> void:
 		if (item.has("category")):
 			write_category(item)
 		if (item.has("space")):
-			write_space(item)
+			write_space(item.height)
 		if (item.has("image")):
 			write_image(item)
 
@@ -34,17 +34,22 @@ func write_category(category : Dictionary) -> void:
 	instance.text = category.text
 	add_child(instance)
 
+	if (category.categorySpacing > 0):
+		write_space(category.categorySpacing)
+
 	for actor in category.actors:
 		write_actor(actor)
+		if (category.actorsSpacing > 0):
+			write_space(category.actorsSpacing)
 
 func write_actor(actor : String) -> void:
 	var instance : Label = label_actor.instantiate()
 	instance.text = actor 
 	add_child(instance)
 
-func write_space(space : Dictionary) -> void:
+func write_space(height : float) -> void:
 	var instance : Control = label_spacing.instantiate()
-	instance.custom_minimum_size.y = space.height
+	instance.custom_minimum_size.y = height
 	add_child(instance)
 
 func write_image(image : Dictionary) -> void:

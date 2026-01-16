@@ -16,7 +16,7 @@
 			"category": true, 
 			"text": "Director", 
 			"categorySpacing": 100,
-			"actorsSpacing": 10,
+			"actorsSpacing": 50,
 			"actors": [
 				"John Doe",
 				"Jane Doe",
