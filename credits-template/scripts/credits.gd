@@ -1,5 +1,5 @@
 @tool
-class_name Credits
+class_name CT_Credits
 extends VBoxContainer
 
 signal credits_finished
@@ -21,33 +21,31 @@ func stop_credits():
 
 # Script methods
 func _ready() -> void:
-	$End.end_reached.connect(credits_ended)
-	
 	$CreditsStaff.load_data(credits_data.data)
+	_velocity = credits_data.data.velocity
 
-	_velocity = credits_data.data["velocity"]
-
-	scroll_to_start()
-	start_scrolling()
+	if not Engine.is_editor_hint():
+		scroll_to_start()
+		start_scrolling()
 
 func _process(delta: float) -> void:
 	if(_isScrolling):
 		scroll(delta)
 
-func scroll_to(_y : float) -> void:
-	self.position.y = _y
-
 func scroll_to_start() -> void:
 	self.position.y = DisplayServer.screen_get_size().y
-
-func scroll(delta: float) -> void:
-	self.position.y += (-_velocity * delta)
 
 func start_scrolling() -> void:
 	_isScrolling = true
 
 func stop_scrolling() -> void:
 	_isScrolling = false
+
+func scroll_to(_y : float) -> void:
+	self.position.y = _y
+
+func scroll(delta: float) -> void:
+	self.position.y += (-_velocity * delta)
 
 func credits_ended(offset : float) -> void:
 	stop_scrolling()

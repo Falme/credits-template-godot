@@ -70,3 +70,5 @@ text = "Director"
 
 [node name="End" parent="." instance=ExtResource("6_nd6c6")]
 layout_mode = 2
+
+[connection signal="end_reached" from="End" to="." method="credits_ended"]

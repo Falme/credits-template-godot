@@ -1,4 +1,4 @@
-class_name CreditsStaff
+class_name CT_CreditsStaff
 extends VBoxContainer
 
 @export var item_title : PackedScene
