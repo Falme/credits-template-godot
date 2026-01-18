@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bn0o3mfx6boe3" path="res://credits-template/scripts/credits.gd" id="1_np21v"]
 [ext_resource type="PackedScene" uid="uid://dh2nk4w2xadb7" path="res://credits-template/prefabs/items/title.tscn" id="2_fdcby"]
 [ext_resource type="JSON" path="res://credits-template/data/credits.json" id="2_o5f3d"]
-[ext_resource type="Script" uid="uid://p1ad18h0os0e" path="res://credits-template/scripts/credits_staff.gd" id="3_6me0r"]
+[ext_resource type="Script" uid="uid://p1ad18h0os0e" path="res://credits-template/scripts/staff.gd" id="3_6me0r"]
 [ext_resource type="PackedScene" uid="uid://c7jyj5f0o3eeh" path="res://credits-template/prefabs/items/spacing.tscn" id="3_nd6c6"]
 [ext_resource type="PackedScene" uid="uid://b7wlj4qgyyyah" path="res://credits-template/prefabs/items/category.tscn" id="4_o5f3d"]
 [ext_resource type="PackedScene" uid="uid://bl7epgfgan4nr" path="res://credits-template/prefabs/items/actor.tscn" id="5_6me0r"]
@@ -20,11 +20,11 @@ credits_data = ExtResource("2_o5f3d")
 [node name="CreditsStaff" type="VBoxContainer" parent="."]
 layout_mode = 2
 script = ExtResource("3_6me0r")
-label_title = ExtResource("2_fdcby")
-label_category = ExtResource("4_o5f3d")
-label_actor = ExtResource("5_6me0r")
-label_spacing = ExtResource("3_nd6c6")
-label_image = ExtResource("8_q2ve6")
+item_title = ExtResource("2_fdcby")
+item_category = ExtResource("4_o5f3d")
+item_actor = ExtResource("5_6me0r")
+item_spacing = ExtResource("3_nd6c6")
+item_image = ExtResource("8_q2ve6")
 
 [node name="Title" parent="CreditsStaff" instance=ExtResource("2_fdcby")]
 layout_mode = 2
@@ -70,3 +70,5 @@ text = "Director"
 
 [node name="End" parent="." instance=ExtResource("6_nd6c6")]
 layout_mode = 2
+
+[connection signal="end_reached" from="End" to="." method="credits_ended"]

@@ -1,7 +1,7 @@
 {
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"velocity": 300.0,
-	"title": "Animal Crossing : New Horizons\nDevelopment Staff",
+	"title": "Super Jump Game 2: \nThe Electric Boogaloo",
 	"items": [
 		{
 			"image": true,
@@ -14,19 +14,14 @@
 		},
 		{
 			"category": true,
-			"text": "Director"
-		},
-		{
-			"actor": true,
-			"text": "Aya Kyogoku"
-		},
-		{
-			"actor": true,
-			"text": "John Doe"
-		},
-		{
-			"actor": true,
-			"text": "Jane Doe"
+			"text": "Director",
+			"categorySpacing": 100.0,
+			"actorsSpacing": 50.0,
+			"actors": [
+				"John Doe",
+				"Jane Doe",
+				"Oscar Garlic"
+			]
 		},
 		{
 			"image": true,
@@ -39,27 +34,14 @@
 		},
 		{
 			"category": true,
-			"text": "Producers"
-		},
-		{
-			"actor": true,
-			"text": "John Doe"
-		},
-		{
-			"actor": true,
-			"text": "Jane Doe"
-		},
-		{
-			"space": true,
-			"height": 100.0
-		},
-		{
-			"actor": true,
-			"text": "Oscar Garlic"
-		},
-		{
-			"actor": true,
-			"text": "Aya Kyogoku"
+			"text": "Producers",
+			"categorySpacing": 100.0,
+			"actorsSpacing": 10.0,
+			"actors": [
+				"John Doe",
+				"Jane Doe",
+				"Oscar Garlic"
+			]
 		}
 	]
 }
