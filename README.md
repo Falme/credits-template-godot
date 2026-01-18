@@ -1,5 +1,7 @@
 [README EN-US](https://github.com/Falme/credits-template-godot/blob/main/README_EN-US.md) 👈
 
+[Unity3D Edition](https://github.com/Falme/credits-template-unity) 👈
+
 # Credits Template : Godot Edition
 
 Template para a interface de créditos para seu jogo (na Godot Engine) com as informações carregadas pelo JSON.
@@ -26,10 +28,11 @@ Para alterar o conteúdo dos créditos, você precisará modificar o arquivo JSO
 
 Para explicar rapidamente cada campo:
 
-- title: Título da cena de créditos, normalmente o nome do jogo
-- category: Categoria ou nome do cargo (exemplo: Produtores)
+- title: Título dos créditos, normalmente o nome do jogo
+- category: Categoria ou nome da função (exemplo: Produtores)
 - actors: Nome da pessoa a ser listada (exemplo: Jane Doe)
-- spacing : Margem/espaço entre nomes e funções
+- spacing: Margem/espaço entre nomes e funções
+- image: Imagens no meio dos créditos, como logos e fotos.
 
 Na próxima seção, explicaremos em mais detalhes a estrutura JSON.
 
@@ -39,21 +42,45 @@ Vou escrever um exemplo de créditos e explicar cada um deles com mais detalhes.
 
 ```json
 {
-	"velocity": 300,
-	"title": "Super Jump Game 2: Electric Boogaloo",
+	"version": "0.1.0",
+	"velocity": 100.0,
+	"title": "Super Jump Game 2: \nThe Electric Boogaloo",
 	"items": [
-		{"space": true, "height": 400},
-		{"category": true, "text": "Director"},
-		{"actor": true, "text": "Aya Kyogoku"},
-		{"actor": true, "text": "John Doe"},
-		{"actor": true, "text": "Jane Doe"},
-		{"space": true, "height": 200},
-		{"category": true, "text": "Producers"},
-		{"actor": true, "text": "John Doe"},
-		{"actor": true, "text": "Jane Doe"},
-		{"space": true, "height": 100},
-		{"actor": true, "text": "Oscar Garlic"},
-		{"actor": true, "text": "Aya Kyogoku"},
+		{
+			"image": true,
+			"path": "credits-template/sprites/example_image.png",
+			"height": 400.0
+		},
+		{
+			"space": true,
+			"height": 400.0
+		},
+		{
+			"category": true,
+			"text": "Director",
+			"categorySpacing": 100.0,
+			"actorsSpacing": 50.0,
+			"actors": [
+				"John Doe",
+				"Jane Doe",
+				"Oscar Garlic"
+			]
+		},
+		{
+			"space": true,
+			"height": 200.0
+		},
+		{
+			"category": true,
+			"text": "Producers",
+			"categorySpacing": 100.0,
+			"actorsSpacing": 10.0,
+			"actors": [
+				"John Doe",
+				"Jane Doe",
+				"Oscar Garlic"
+			]
+		}
 	]
 }
 ```
@@ -62,8 +89,13 @@ Explicaremos cada campo de cima para baixo.
 
 - velocity: Velocidade de rolagem dos créditos, velocidade de movimento
 - title: Primeiro campo dos créditos, normalmente o nome do jogo
-- items: Pessoas que trabalharam no projeto e suas funções
-    - space: espaço vazio, uma margem entre um texto e outro
+- items: Array contendo todos os objetos que podem ser adicionados aos créditos
+	- image: Uma imagem para ser adicionada aos créditos
+		- path: Endereço/caminho para a imagem (base é "res://")
+		- height: altura da imagem a ser exibida. A largura é proporcional ao tamanho original.
+    - space: espaço vazio, uma margem entre uma label e outra label
+		- height: altura do espaço a ser exibido
     - category: o título do cargo
-    - actor: Nomes daqueles que trabalharam no projeto na função especificada acima.
-
+		- categorySpacing: Espaço vazio entre o cargo e os nomes
+		- actorsSpacing: Espaço vazio entre os nomes e nomes
+		- actors: Nomes daqueles que trabalharam no projeto na função especificada acima.

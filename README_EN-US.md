@@ -1,5 +1,7 @@
 [README PT-BR](https://github.com/Falme/credits-template-godot/blob/main/README.md) 👈
 
+[Unity3D Edition](https://github.com/Falme/credits-template-unity) 👈
+
 # Credits Template : Godot Edition
 
 A Template of Credits Interface for your game (in Godot Engine) with the informations being loaded from a JSON.
@@ -30,6 +32,7 @@ To quick explain each field:
 - category : Category or Job name (example: Producers)
 - actors : Name of the person to be listed (example: Jane Doe)
 - spacing : Margin/space between names and roles
+- image : Images in the middle of the credits, like logos and photos
 
 The next section we will be explaining in more details the JSON structure.
 
@@ -39,21 +42,45 @@ I will write down an example of credits, and explain with more details each one 
 
 ```json
 {
-	"velocity": 300,
-	"title": "Super Jump Game 2: Electric Boogaloo",
+	"version": "0.1.0",
+	"velocity": 100.0,
+	"title": "Super Jump Game 2: \nThe Electric Boogaloo",
 	"items": [
-		{"space": true, "height": 400},
-		{"category": true, "text": "Director"},
-		{"actor": true, "text": "Aya Kyogoku"},
-		{"actor": true, "text": "John Doe"},
-		{"actor": true, "text": "Jane Doe"},
-		{"space": true, "height": 200},
-		{"category": true, "text": "Producers"},
-		{"actor": true, "text": "John Doe"},
-		{"actor": true, "text": "Jane Doe"},
-		{"space": true, "height": 100},
-		{"actor": true, "text": "Oscar Garlic"},
-		{"actor": true, "text": "Aya Kyogoku"},
+		{
+			"image": true,
+			"path": "credits-template/sprites/example_image.png",
+			"height": 400.0
+		},
+		{
+			"space": true,
+			"height": 400.0
+		},
+		{
+			"category": true,
+			"text": "Director",
+			"categorySpacing": 100.0,
+			"actorsSpacing": 50.0,
+			"actors": [
+				"John Doe",
+				"Jane Doe",
+				"Oscar Garlic"
+			]
+		},
+		{
+			"space": true,
+			"height": 200.0
+		},
+		{
+			"category": true,
+			"text": "Producers",
+			"categorySpacing": 100.0,
+			"actorsSpacing": 10.0,
+			"actors": [
+				"John Doe",
+				"Jane Doe",
+				"Oscar Garlic"
+			]
+		}
 	]
 }
 ```
@@ -62,8 +89,13 @@ From top to bottom, we will explain each field.
 
 - velocity : Velocity of the credits scrolling, speed of movement
 - title : First field of credits, normally the name of the game
-- items : People that worked in the project and their roles
+- items : Array of each item object that can be added to the credits
+	- image : An image to be added to the credits
+		- path : Address/path to the image (base is "res://")
+		- height : height of the image to be displayed, width is proportional to the original size
     - space : empty space, a margin between a label and other label
+		- height : height of the space to be displayed
     - category : the role title
-    - actor : Names, those who worked in the project at the specific role above
-
+		- categorySpacing : Empty space between role and actors
+		- actorsSpacing : Empty space between actors and actors
+		- actors : Names, those who worked in the project at the specified role above

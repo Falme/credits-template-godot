@@ -14,7 +14,7 @@ func load_data(data : Dictionary) -> void:
 	_draw_staff(data.items)
 
 func _draw_title(title : String) -> void:
-	var instance = item_title.instantiate()
+	var instance: Label = item_title.instantiate()
 	instance.text = title
 	add_child(instance)
 
