@@ -22,42 +22,39 @@ func _draw_staff(items : Array) -> void:
 	for item in items:
 		if (item.has("category")):
 			_draw_category(item)
-		if (item.has("space")):
+		elif (item.has("space")):
 			_draw_space(item.height)
-		if (item.has("image")):
+		elif (item.has("image")):
 			_draw_image(item)
 
 		await get_tree().process_frame
 
 func _draw_category(category : Dictionary) -> void:
-	var instance : Label = item_category.instantiate()
-	instance.text = category.text
-	print(category.text)
+	var instance: CT_Category = item_category.instantiate()
 	add_child(instance)
 
-	if (category.has("categorySpacing") && category.categorySpacing > 0):
-		_draw_space(category.categorySpacing)
+	instance.OnDrawSpace.connect(_draw_space)
+	instance.OnDrawActor.connect(_draw_actor)
 
-	for actor in category.actors:
-		_draw_actor(actor)
-		if (category.has("actorsSpacing") && category.actorsSpacing > 0):
-			_draw_space(category.actorsSpacing)
+	instance.initialize(category)
+
+	instance.OnDrawActor.disconnect(_draw_actor)
+	instance.OnDrawSpace.disconnect(_draw_space)
 
 func _draw_actor(actor : String) -> void:
-	var instance : Label = item_actor.instantiate()
-	print(actor)
-	instance.text = actor 
+	var instance : CT_Actor = item_actor.instantiate()
 	add_child(instance)
+	instance.initialize(actor)
 
 func _draw_space(height : float) -> void:
-	var instance : Control = item_spacing.instantiate()
-	instance.custom_minimum_size.y = height
+	var instance: CT_Space = item_spacing.instantiate()
 	add_child(instance)
+	instance.initialize(height)
 
 func _draw_image(image : Dictionary) -> void:
 	var instance: CT_Image = item_image.instantiate()
-	instance.initialize(image)
 	add_child(instance)
+	instance.initialize(image)
 
 func clear() -> void:
 	var children = get_children()

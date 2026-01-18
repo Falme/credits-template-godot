@@ -2,6 +2,14 @@ class_name CT_Image
 extends TextureRect
 
 func initialize(image : Dictionary) -> void:
+	if(not image.has("path")):
+		print("Credits Template : Image requires a field 'path'!")
+		return
+
+	if(not image.has("height")):
+		print("Credits Template : Image requires a field 'height'!")
+		return
+
 	_set_texture(image.path)
 	_set_height(image.height)
 

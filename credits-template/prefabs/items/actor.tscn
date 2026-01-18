@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://bl7epgfgan4nr"]
+[gd_scene load_steps=2 format=3 uid="uid://bl7epgfgan4nr"]
+
+[ext_resource type="Script" uid="uid://uh01ghii702i" path="res://credits-template/scripts/items/actor.gd" id="1_cpapo"]
 
 [node name="Actor" type="Label"]
 text = "    Aya Kyogoku"
+script = ExtResource("1_cpapo")

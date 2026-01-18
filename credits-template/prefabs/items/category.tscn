@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://b7wlj4qgyyyah"]
+[gd_scene load_steps=3 format=3 uid="uid://b7wlj4qgyyyah"]
+
+[ext_resource type="Script" uid="uid://v7ltveec5rcg" path="res://credits-template/scripts/items/category.gd" id="1_7sfkd"]
+[ext_resource type="PackedScene" uid="uid://bl7epgfgan4nr" path="res://credits-template/prefabs/items/actor.tscn" id="2_bm0gr"]
 
 [node name="Category" type="Label"]
 text = "Director"
+script = ExtResource("1_7sfkd")
+item_actor = ExtResource("2_bm0gr")
