@@ -32,18 +32,20 @@ func _draw_staff(items : Array) -> void:
 func _draw_category(category : Dictionary) -> void:
 	var instance : Label = item_category.instantiate()
 	instance.text = category.text
+	print(category.text)
 	add_child(instance)
 
-	if (category.categorySpacing > 0):
+	if (category.has("categorySpacing") && category.categorySpacing > 0):
 		_draw_space(category.categorySpacing)
 
 	for actor in category.actors:
 		_draw_actor(actor)
-		if (category.actorsSpacing > 0):
+		if (category.has("actorsSpacing") && category.actorsSpacing > 0):
 			_draw_space(category.actorsSpacing)
 
 func _draw_actor(actor : String) -> void:
 	var instance : Label = item_actor.instantiate()
+	print(actor)
 	instance.text = actor 
 	add_child(instance)
 
@@ -53,9 +55,8 @@ func _draw_space(height : float) -> void:
 	add_child(instance)
 
 func _draw_image(image : Dictionary) -> void:
-	var instance : TextureRect = item_image.instantiate()
-	instance.texture = load("res://"+image.path)
-	instance.custom_minimum_size.y = image.height
+	var instance: CT_Image = item_image.instantiate()
+	instance.initialize(image)
 	add_child(instance)
 
 func clear() -> void:
