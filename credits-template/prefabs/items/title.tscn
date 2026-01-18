@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://dh2nk4w2xadb7"]
 
 [node name="Title" type="Label"]
-text = "Animal Crossing : New Horizons
-Development Staff"
+text = "#ERROR TITLE"
 horizontal_alignment = 1
