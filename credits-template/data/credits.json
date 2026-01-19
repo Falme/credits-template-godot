@@ -1,27 +1,11 @@
 {
-	"version": "0.1.0",
-	"velocity": 300.0,
-	"title": "Super Jump Game 2: \nThe Electric Boogaloo",
+	"version": "0.0.1",
+	"velocity": 100.0,
+	"title": "Credits Template: \nThe Template for your credits",
 	"items": [
 		{
-			"image": true,
-			"path": "icon.svg",
-			"height": 400.0
-		},
-		{
 			"space": true,
-			"height": 400.0
-		},
-		{
-			"category": true,
-			"text": "Director",
-			"categorySpacing": 100.0,
-			"actorsSpacing": 50.0,
-			"actors": [
-				"John Doe",
-				"Jane Doe",
-				"Oscar Garlic"
-			]
+			"height": 100.0
 		},
 		{
 			"image": true,
@@ -30,17 +14,50 @@
 		},
 		{
 			"space": true,
-			"height": 200.0
+			"height": 100.0
 		},
 		{
 			"category": true,
-			"text": "Producers",
-			"categorySpacing": 100.0,
+			"text": "Created By",
+			"categorySpacing": 10.0,
 			"actorsSpacing": 10.0,
 			"actors": [
-				"John Doe",
-				"Jane Doe",
-				"Oscar Garlic"
+				"Falme Streamless"
+			]
+		},
+		{
+			"space": true,
+			"height": 100.0
+		},
+		{
+			"category": true,
+			"text": "Special Thanks",
+			"actors": [
+				"Alex Arroyo"
+			]
+		},
+		{
+			"space": true,
+			"height": 100.0
+		},
+		{
+			"category": true,
+			"text": "Background Image",
+			"actors": [
+				"Animal Crossing: New Horizons",
+				"From: https://interfaceingame.com/"
+			]
+		},
+		{
+			"space": true,
+			"height": 100.0
+		},
+		{
+			"category": true,
+			"text": "Image Not Found Author",
+			"actors": [
+				"Jordan Irwin (AntumDeluge)",
+				"From: https://opengameart.org/content/failsafe-image"
 			]
 		}
 	]

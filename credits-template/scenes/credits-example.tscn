@@ -26,6 +26,5 @@ offset_top = -17801.938
 offset_bottom = -16891.926
 grow_horizontal = 2
 grow_vertical = 2
-velocity = 100.0
 
 [editable path="Control/CreditsRoll"]
