@@ -1,7 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://bl7epgfgan4nr"]
+[gd_scene load_steps=4 format=3 uid="uid://bl7epgfgan4nr"]
 
 [ext_resource type="Script" uid="uid://uh01ghii702i" path="res://credits-template/scripts/items/actor.gd" id="1_cpapo"]
 
+[sub_resource type="SystemFont" id="SystemFont_cpapo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bxnw5"]
+font = SubResource("SystemFont_cpapo")
+font_size = 22
+
 [node name="Actor" type="Label"]
 text = "#ERROR ACTOR"
+label_settings = SubResource("LabelSettings_bxnw5")
 script = ExtResource("1_cpapo")
