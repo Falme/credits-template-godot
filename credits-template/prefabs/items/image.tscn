@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxmwoaqjqswpl"]
+[gd_scene load_steps=3 format=3 uid="uid://dxmwoaqjqswpl"]
 
-[ext_resource type="Texture2D" uid="uid://dvvogvg8bxkg6" path="res://credits-template/sprites/example_image.png" id="1_3pkfr"]
+[ext_resource type="Texture2D" uid="uid://dun1nnulpp4us" path="res://credits-template/sprites/failsafe.png" id="1_3bnl7"]
+[ext_resource type="Script" uid="uid://dx23wrgnaqjq" path="res://credits-template/scripts/items/image.gd" id="2_3bnl7"]
 
 [node name="Image" type="TextureRect"]
-texture = ExtResource("1_3pkfr")
+texture = ExtResource("1_3bnl7")
 expand_mode = 1
 stretch_mode = 5
+script = ExtResource("2_3bnl7")

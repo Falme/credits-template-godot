@@ -1,4 +1,18 @@
-[gd_scene format=3 uid="uid://b7wlj4qgyyyah"]
+[gd_scene load_steps=4 format=3 uid="uid://b7wlj4qgyyyah"]
+
+[ext_resource type="Script" uid="uid://v7ltveec5rcg" path="res://credits-template/scripts/items/category.gd" id="1_7sfkd"]
+
+[sub_resource type="SystemFont" id="SystemFont_7sfkd"]
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_bm0gr"]
+font = SubResource("SystemFont_7sfkd")
+font_size = 28
+font_color = Color(0.9, 0.50895, 0.18899998, 1)
+outline_size = 2
+outline_color = Color(0.7294118, 0.4627451, 0.4627451, 1)
 
 [node name="Category" type="Label"]
-text = "Director"
+text = "#ERROR CATEGORY"
+label_settings = SubResource("LabelSettings_bm0gr")
+script = ExtResource("1_7sfkd")

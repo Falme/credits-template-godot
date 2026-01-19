@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://c7jyj5f0o3eeh"]
+[gd_scene load_steps=2 format=3 uid="uid://c7jyj5f0o3eeh"]
+
+[ext_resource type="Script" uid="uid://daklfvs1ri8kh" path="res://credits-template/scripts/items/space.gd" id="1_03lfu"]
 
 [node name="Spacing" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_bottom = 127.0
+script = ExtResource("1_03lfu")
