@@ -1,13 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2jaag5vu5uu1"]
+[gd_scene load_steps=5 format=3 uid="uid://c2jaag5vu5uu1"]
 
-[ext_resource type="Texture2D" uid="uid://cuiytewepp0l4" path="res://credits-template/sprites/background.png" id="1_21mbh"]
+[ext_resource type="Texture2D" uid="uid://dnxck3c6rii36" path="res://credits-template/sprites/mixtapes.png" id="1_21mbh"]
 [ext_resource type="PackedScene" uid="uid://do7gek62mdc4e" path="res://credits-template/prefabs/credits.tscn" id="2_utq03"]
+
+[sub_resource type="Gradient" id="Gradient_utq03"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_lpqq8"]
+gradient = SubResource("Gradient_utq03")
 
 [node name="CreditsExample" type="Node"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1032.4445, 552.5)
-scale = Vector2(1.6319444, 1.6319444)
+position = Vector2(960.5, 543.00006)
+scale = Vector2(30.421873, 17.4375)
+texture = SubResource("GradientTexture2D_lpqq8")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(475.02283, 470.25)
+scale = Vector2(1.4918865, 1.4918864)
 texture = ExtResource("1_21mbh")
 
 [node name="Control" type="Control" parent="."]
