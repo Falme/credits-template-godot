@@ -9,7 +9,7 @@ var _isScrolling : bool = false
 
 func _ready() -> void:
 	$CreditsStaff.load_data(credits_data.data)
-	_velocity = credits_data.data.velocity
+	set_scroll_velocity( credits_data.data.velocity )
 
 	scroll_to_start()
 	start_scrolling()
@@ -32,6 +32,9 @@ func scroll_to(_y : float) -> void:
 
 func scroll(delta: float) -> void:
 	self.position.y += (-_velocity * delta)
+
+func set_scroll_velocity(velocity : float)
+	self._velocity = velocity
 
 func credits_ended(offset : float) -> void:
 	stop_scrolling()
