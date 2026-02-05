@@ -5,7 +5,7 @@ extends Control
 
 var freeItems : Dictionary[String, Array] = {}
 
-func get_item(id : String, parent : Control):
+func get_item(id : String):
 	if not freeItems.has(id):
 		freeItems[id] = []
 	
@@ -13,12 +13,15 @@ func get_item(id : String, parent : Control):
 		add(id)
 	
 	var item = freeItems[id].pop_back()
-	parent.add_child(item)
 	return item
 
 func add(id : String) -> void:
 	var item = _get_item_by_id(id)
 	freeItems[id].push_front(item)
+
+func free_item(id : String, item) -> void:
+	freeItems[id].push_front(item)
+	add_child(item)
 
 func _get_item_by_id(id : String):
 	for item in poolItems:

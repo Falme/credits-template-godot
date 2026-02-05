@@ -5,7 +5,6 @@ extends VBoxContainer
 
 func load_data(data : Dictionary) -> void:
 	clear()
-
 	_draw_staff(data.items)
 
 func _draw_staff(items : Array) -> void:
@@ -16,7 +15,7 @@ func _draw_staff(items : Array) -> void:
 		await get_tree().process_frame
 
 func _draw_item(id : String, item : Dictionary) -> void:
-	var instance = pool.get_item(id, self)
+	var instance = pool.get_item(id)
 	add_child(instance)
 	if (not instance.has_method("initialize")):
 		printerr("initialize not found at "+id)
