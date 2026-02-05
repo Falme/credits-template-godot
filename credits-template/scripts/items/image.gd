@@ -1,17 +1,17 @@
 class_name CT_Image
 extends TextureRect
 
-func initialize(image : Dictionary) -> void:
-	if(not image.has("path")):
-		print("Credits Template : Image requires a field 'path'!")
+func initialize(item : Dictionary) -> void:
+	if(not item.has("path")):
+		printerr("Credits Template : item requires a field 'path'!")
 		return
 
-	if(not image.has("height")):
-		print("Credits Template : Image requires a field 'height'!")
+	if(not item.has("height")):
+		printerr("Credits Template : item requires a field 'height'!")
 		return
 
-	_set_texture(image.path)
-	_set_height(image.height)
+	_set_texture(item.path)
+	_set_height(item.height)
 
 func _set_texture(path: String) -> void:
 	var loaded_file : Texture2D = load(path)
@@ -22,7 +22,5 @@ func _set_texture(path: String) -> void:
 	self.texture = loaded_file
 
 func _set_height(height: float) -> void:
-	if(height < 0):
-		height = 0
-
+	height = max(0, height)
 	self.custom_minimum_size.y = height

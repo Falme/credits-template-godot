@@ -1,6 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dh2nk4w2xadb7"]
+[gd_scene load_steps=4 format=3 uid="uid://dh2nk4w2xadb7"]
+
+[ext_resource type="Script" uid="uid://sm7mtjtth40i" path="res://credits-template/scripts/items/title.gd" id="1_7q606"]
 
 [sub_resource type="SystemFont" id="SystemFont_w47go"]
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_7q606"]
 font = SubResource("SystemFont_w47go")
@@ -10,3 +13,4 @@ font_size = 42
 text = "#ERROR TITLE"
 label_settings = SubResource("LabelSettings_7q606")
 horizontal_alignment = 1
+script = ExtResource("1_7q606")

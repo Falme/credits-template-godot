@@ -1,5 +1,5 @@
-class_name CT_Actor
+class_name CT_Title
 extends Label
 
 func initialize(item : Dictionary) -> void:
-	self.text = '\n'.join(item["actors"])
+	self.text = item["text"]

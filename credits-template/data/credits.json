@@ -1,62 +1,76 @@
 {
 	"version": "0.0.1",
 	"velocity": 100.0,
-	"title": "Credits Template: \nThe Template for your credits",
 	"items": [
 		{
-			"space": true,
+			"type": "title",
+			"text": "Credits Template: \nThe Template for your credits"
+		},
+		{
+			"type": "space",
 			"height": 100.0
 		},
 		{
-			"image": true,
+			"type": "image",
 			"path": "credits-template/sprites/example_image.png",
 			"height": 400.0
 		},
 		{
-			"space": true,
+			"type": "space",
 			"height": 100.0
 		},
 		{
-			"category": true,
-			"text": "Created By",
-			"categorySpacing": 10.0,
-			"actorsSpacing": 10.0,
+			"type": "category",
+			"text": "Created By"
+		},
+		{
+			"type": "actor",
 			"actors": [
 				"Falme Streamless"
 			]
 		},
 		{
-			"space": true,
+			"type": "space",
 			"height": 100.0
 		},
 		{
-			"category": true,
-			"text": "Special Thanks",
+			"type": "category",
+			"text": "Special Thanks"
+		},
+		{
+			"type": "actor",
 			"actors": [
 				"Alex Arroyo",
 				"Danilo Cavedon",
+				"Ruan Lima",
 				"And everyone who shared this project!"
 			]
 		},
 		{
-			"space": true,
+			"type": "space",
 			"height": 100.0
 		},
 		{
-			"category": true,
-			"text": "Background Image",
+			"type": "category",
+			"text": "Background Image"
+		},
+		{
+			"type": "actor",
 			"actors": [
 				"Mixtapes",
 				"From: https://falme.itch.io/mixtapes"
 			]
 		},
 		{
-			"space": true,
+			"type": "space",
 			"height": 100.0
 		},
 		{
-			"category": true,
-			"text": "Image Not Found Author",
+			"type": "category",
+			"text": "Image Not Found Author"
+		},
+		{
+			"type": "actor",
 			"actors": [
 				"Jordan Irwin (AntumDeluge)",
 				"From: https://opengameart.org/content/failsafe-image"

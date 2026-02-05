@@ -33,7 +33,7 @@ func scroll_to(_y : float) -> void:
 func scroll(delta: float) -> void:
 	self.position.y += (-_velocity * delta)
 
-func set_scroll_velocity(velocity : float)
+func set_scroll_velocity(velocity : float):
 	self._velocity = velocity
 
 func credits_ended(offset : float) -> void:

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://uh01ghii702i" path="res://credits-template/scripts/items/actor.gd" id="1_cpapo"]
 
 [sub_resource type="SystemFont" id="SystemFont_cpapo"]
+subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="LabelSettings_bxnw5"]
 font = SubResource("SystemFont_cpapo")
