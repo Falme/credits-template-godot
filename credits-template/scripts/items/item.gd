@@ -19,3 +19,6 @@ func _process(delta: float) -> void:
 
 func has_passed_top_border() -> bool:
 	return global_position.y < -size.y
+
+func has_passed_bottom_border() -> bool:
+	return global_position.y <= DisplayServer.screen_get_size().y

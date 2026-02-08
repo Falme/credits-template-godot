@@ -15,6 +15,7 @@ func get_item(id : String):
 		add(id)
 	
 	var item = freeItems[id].pop_back()
+	remove_child(item)
 	item.show()
 	return item
 
@@ -23,14 +24,15 @@ func add(id : String) -> void:
 	item.set_pool(self)
 	item.set_id(id)
 	item.hide()
+	add_child(item)
 	freeItems[id].push_front(item)
 
 func free_item(id : String, item) -> void:
 	on_removed_item.emit(item.size.y)
 	freeItems[id].push_front(item)
+	item.hide()
 	item.get_parent().remove_child(item)
 	add_child(item)
-	item.hide()
 
 func _get_item_by_id(id : String):
 	for item in poolItems:
