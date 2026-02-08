@@ -13,7 +13,7 @@ func load_data(data : Dictionary) -> void:
 	clear()
 	_draw_staff(data.items)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 
 	if self.get_child_count() == 0:
 		return

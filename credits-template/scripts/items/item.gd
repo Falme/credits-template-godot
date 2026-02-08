@@ -1,10 +1,11 @@
-@abstract class_name CT_Item
+@abstract 
+class_name CT_Item
 extends Control
 
 var _id : String
 var _pool : CT_Pool
 
-func initialize(data : Dictionary) -> void:
+func initialize(_data : Dictionary) -> void:
 	pass
 
 func set_pool(pool : CT_Pool):
@@ -13,7 +14,7 @@ func set_pool(pool : CT_Pool):
 func set_id(id : String):
 	_id = id
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if (has_passed_top_border()):
 		_pool.free_item(_id, self)
 
