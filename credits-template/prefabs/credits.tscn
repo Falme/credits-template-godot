@@ -51,19 +51,14 @@ credits_data = ExtResource("2_o5f3d")
 
 [node name="CreditsStaff" type="VBoxContainer" parent="." node_paths=PackedStringArray("pool")]
 layout_mode = 2
+theme_override_constants/separation = 0
 script = ExtResource("3_6me0r")
 pool = NodePath("../CreditsPool")
-item_title = ExtResource("2_fdcby")
-item_category = ExtResource("4_o5f3d")
-item_actor = ExtResource("5_6me0r")
-item_spacing = ExtResource("3_nd6c6")
-item_image = ExtResource("8_q2ve6")
 
 [node name="End" parent="." instance=ExtResource("6_nd6c6")]
 layout_mode = 2
 
 [node name="CreditsPool" type="Control" parent="."]
-visible = false
 layout_mode = 2
 script = ExtResource("10_ka0nr")
 poolItems = Array[ExtResource("4_33vap")]([SubResource("Resource_8ypmv"), SubResource("Resource_xkiej"), SubResource("Resource_d3wve"), SubResource("Resource_ibl55"), SubResource("Resource_emndi")])

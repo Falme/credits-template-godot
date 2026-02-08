@@ -1,5 +1,5 @@
 class_name CT_Actor
-extends Label
+extends CT_Item
 
 func initialize(item : Dictionary) -> void:
-	self.text = '\n'.join(item["actors"])
+	$Label.text = '\n'.join(item["actors"])

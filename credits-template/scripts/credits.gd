@@ -11,6 +11,8 @@ func _ready() -> void:
 	$CreditsStaff.load_data(credits_data.data)
 	set_scroll_velocity( credits_data.data.velocity )
 
+	$CreditsPool.on_removed_item.connect(add_scroll)
+
 	scroll_to_start()
 	start_scrolling()
 
@@ -30,6 +32,12 @@ func stop_scrolling() -> void:
 func scroll_to(_y : float) -> void:
 	self.position.y = _y
 
+func add_scroll(_y : float) -> void:
+	self.position.y += _y
+
+func subtract_scroll(_y : float) -> void:
+	self.position.y -= _y
+	
 func scroll(delta: float) -> void:
 	self.position.y += (-_velocity * delta)
 

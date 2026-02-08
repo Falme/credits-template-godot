@@ -38,4 +38,10 @@ offset_bottom = -16891.926
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="CreditsPool" parent="Control/CreditsRoll" index="2"]
+visible = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(949, 538)
+
 [editable path="Control/CreditsRoll"]

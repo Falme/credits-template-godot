@@ -1,5 +1,5 @@
 class_name CT_Title
-extends Label
+extends CT_Item
 
 func initialize(item : Dictionary) -> void:
-	self.text = item["text"]
+	$Label.text = item["text"]

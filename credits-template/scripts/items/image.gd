@@ -1,5 +1,5 @@
 class_name CT_Image
-extends TextureRect
+extends CT_Item
 
 func initialize(item : Dictionary) -> void:
 	if(not item.has("path")):
@@ -19,8 +19,8 @@ func _set_texture(path: String) -> void:
 	if loaded_file == null:
 		return
 
-	self.texture = loaded_file
+	$Sprite.texture = loaded_file
 
 func _set_height(height: float) -> void:
 	height = max(0, height)
-	self.custom_minimum_size.y = height
+	$Sprite.custom_minimum_size.y = height

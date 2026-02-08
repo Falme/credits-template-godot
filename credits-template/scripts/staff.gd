@@ -19,7 +19,7 @@ func _draw_item(id : String, item : Dictionary) -> void:
 	add_child(instance)
 	if (not instance.has_method("initialize")):
 		printerr("initialize not found at "+id)
-	print("instatiating "+id)
+
 	instance.initialize(item)
 
 func clear() -> void:

@@ -1,5 +1,5 @@
 class_name CT_Category
-extends Label
+extends CT_Item
 
 func initialize(category: Dictionary) -> void:
 	if(category == null):
@@ -13,4 +13,4 @@ func initialize(category: Dictionary) -> void:
 	_set_text(category.text)
 
 func _set_text(new_text: String) -> void:
-	self.text = new_text
+	$Label.text = new_text
