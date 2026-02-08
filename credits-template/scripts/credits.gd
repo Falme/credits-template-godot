@@ -35,9 +35,6 @@ func scroll_to(_y : float) -> void:
 func add_scroll(_y : float) -> void:
 	self.position.y += _y
 
-func subtract_scroll(_y : float) -> void:
-	self.position.y -= _y
-	
 func scroll(delta: float) -> void:
 	self.position.y += (-_velocity * delta)
 

@@ -1,46 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://do7gek62mdc4e"]
+[gd_scene load_steps=7 format=3 uid="uid://do7gek62mdc4e"]
 
 [ext_resource type="Script" uid="uid://bn0o3mfx6boe3" path="res://credits-template/scripts/credits.gd" id="1_np21v"]
-[ext_resource type="PackedScene" uid="uid://dh2nk4w2xadb7" path="res://credits-template/prefabs/items/title.tscn" id="2_fdcby"]
 [ext_resource type="JSON" path="res://credits-template/data/credits.json" id="2_o5f3d"]
 [ext_resource type="Script" uid="uid://p1ad18h0os0e" path="res://credits-template/scripts/staff.gd" id="3_6me0r"]
-[ext_resource type="PackedScene" uid="uid://c7jyj5f0o3eeh" path="res://credits-template/prefabs/items/spacing.tscn" id="3_nd6c6"]
-[ext_resource type="Script" uid="uid://dmogrs8dkli1s" path="res://credits-template/scripts/pool_item.gd" id="4_33vap"]
-[ext_resource type="PackedScene" uid="uid://b7wlj4qgyyyah" path="res://credits-template/prefabs/items/category.tscn" id="4_o5f3d"]
-[ext_resource type="PackedScene" uid="uid://bl7epgfgan4nr" path="res://credits-template/prefabs/items/actor.tscn" id="5_6me0r"]
 [ext_resource type="PackedScene" uid="uid://cm7lkn1487awy" path="res://credits-template/prefabs/items/end.tscn" id="6_nd6c6"]
-[ext_resource type="PackedScene" uid="uid://dxmwoaqjqswpl" path="res://credits-template/prefabs/items/image.tscn" id="8_q2ve6"]
+[ext_resource type="Resource" uid="uid://0uiuxjau1a3k" path="res://credits-template/resources/item_list.tres" id="6_o5f3d"]
 [ext_resource type="Script" uid="uid://ct2ngwty4tpbv" path="res://credits-template/scripts/pool.gd" id="10_ka0nr"]
-
-[sub_resource type="Resource" id="Resource_8ypmv"]
-script = ExtResource("4_33vap")
-id = "title"
-prefab = ExtResource("2_fdcby")
-metadata/_custom_type_script = "uid://dmogrs8dkli1s"
-
-[sub_resource type="Resource" id="Resource_xkiej"]
-script = ExtResource("4_33vap")
-id = "category"
-prefab = ExtResource("4_o5f3d")
-metadata/_custom_type_script = "uid://dmogrs8dkli1s"
-
-[sub_resource type="Resource" id="Resource_d3wve"]
-script = ExtResource("4_33vap")
-id = "actor"
-prefab = ExtResource("5_6me0r")
-metadata/_custom_type_script = "uid://dmogrs8dkli1s"
-
-[sub_resource type="Resource" id="Resource_ibl55"]
-script = ExtResource("4_33vap")
-id = "image"
-prefab = ExtResource("8_q2ve6")
-metadata/_custom_type_script = "uid://dmogrs8dkli1s"
-
-[sub_resource type="Resource" id="Resource_emndi"]
-script = ExtResource("4_33vap")
-id = "space"
-prefab = ExtResource("3_nd6c6")
-metadata/_custom_type_script = "uid://dmogrs8dkli1s"
 
 [node name="CreditsRoll" type="VBoxContainer"]
 anchors_preset = 15
@@ -61,6 +26,6 @@ layout_mode = 2
 [node name="CreditsPool" type="Control" parent="."]
 layout_mode = 2
 script = ExtResource("10_ka0nr")
-poolItems = Array[ExtResource("4_33vap")]([SubResource("Resource_8ypmv"), SubResource("Resource_xkiej"), SubResource("Resource_d3wve"), SubResource("Resource_ibl55"), SubResource("Resource_emndi")])
+pool_items = ExtResource("6_o5f3d")
 
 [connection signal="end_reached" from="End" to="." method="credits_ended"]

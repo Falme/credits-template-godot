@@ -1,6 +1,10 @@
 class_name CT_CreditsStaff
 extends VBoxContainer
 
+const TYPE = "type"
+const INITIALIZE = "initialize"
+const ERR_INITIALIZE_NOT_FOUND = "initialize not found at id : "
+
 @export var pool : CT_Pool
 
 var load_list : Array
@@ -23,21 +27,20 @@ func _process(delta: float) -> void:
 func _draw_staff(items : Array) -> void:
 	var first : bool = true
 	for item in items:
-		if (item.has("type")):
-			load_list.push_back(func(): _draw_item(item["type"], item))
+		if (item.has(TYPE)):
+			load_list.push_back(func(): _draw_item(item[TYPE], item))
 
 		if (first):
 			load_list.pop_front().call()
 			first = false
 
-		# await get_tree().process_frame
-	print(load_list.size())
+		await get_tree().process_frame
 
 func _draw_item(id : String, item : Dictionary) -> void:
 	var instance = pool.get_item(id)
 	add_child(instance)
-	if (not instance.has_method("initialize")):
-		printerr("initialize not found at "+id)
+	if (not instance.has_method(INITIALIZE)):
+		printerr(ERR_INITIALIZE_NOT_FOUND, id)
 
 	instance.initialize(item)
 

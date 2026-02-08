@@ -3,18 +3,18 @@ extends Control
 
 signal on_removed_item(height: float)
 
-@export var poolItems : Array[CT_PoolItem]
+@export var pool_items : CT_Item_List
 
-var freeItems : Dictionary[String, Array] = {}
+var free_items : Dictionary[String, Array] = {}
 
 func get_item(id : String):
-	if not freeItems.has(id):
-		freeItems[id] = []
+	if not free_items.has(id):
+		free_items[id] = []
 	
-	if freeItems[id].size() <= 0:
+	if free_items[id].size() <= 0:
 		add(id)
 	
-	var item = freeItems[id].pop_back()
+	var item = free_items[id].pop_back()
 	remove_child(item)
 	item.show()
 	return item
@@ -25,17 +25,17 @@ func add(id : String) -> void:
 	item.set_id(id)
 	item.hide()
 	add_child(item)
-	freeItems[id].push_front(item)
+	free_items[id].push_front(item)
 
 func free_item(id : String, item) -> void:
 	on_removed_item.emit(item.size.y)
-	freeItems[id].push_front(item)
+	free_items[id].push_front(item)
 	item.hide()
 	item.get_parent().remove_child(item)
 	add_child(item)
 
 func _get_item_by_id(id : String):
-	for item in poolItems:
+	for item in pool_items.item_list:
 		if item.id == id:
 			return item.prefab.instantiate()
 	return null
