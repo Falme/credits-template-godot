@@ -3,45 +3,48 @@ extends VBoxContainer
 
 signal credits_finished
 
-@export var credits_data : Resource
-var _velocity : float
-var _isScrolling : bool = false
+@export var credits_data: Resource
+
+var _velocity: float
+var _is_scrolling: bool = false
+
 
 func _ready() -> void:
 	$CreditsStaff.load_data(credits_data.data)
 	set_scroll_velocity( credits_data.data.velocity )
 
-	$CreditsPool.on_removed_item.connect(add_scroll)
+	$CreditsPool.removed_item.connect(add_scroll)
 
-	scroll_to_start()
-	start_scrolling()
+	move_scroll_to_start()
+	start()
+
 
 func _process(delta: float) -> void:
-	if(_isScrolling):
-		scroll(delta)
+	if(_is_scrolling):
+		add_scroll(-_velocity * delta)
 
-func scroll_to_start() -> void:
+
+func move_scroll_to_start() -> void:
 	self.position.y = DisplayServer.screen_get_size().y
 
-func start_scrolling() -> void:
-	_isScrolling = true
 
-func stop_scrolling() -> void:
-	_isScrolling = false
+func start() -> void:
+	_is_scrolling = true
 
-func scroll_to(_y : float) -> void:
-	self.position.y = _y
 
-func add_scroll(_y : float) -> void:
+func stop() -> void:
+	_is_scrolling = false
+
+
+func add_scroll(_y: float) -> void:
 	self.position.y += _y
 
-func scroll(delta: float) -> void:
-	self.position.y += (-_velocity * delta)
 
-func set_scroll_velocity(velocity : float):
+func set_scroll_velocity(velocity: float) -> void:
 	self._velocity = velocity
 
-func credits_ended(offset : float) -> void:
-	stop_scrolling()
-	scroll_to(self.position.y - offset)
+
+func credits_ended(offset: float) -> void:
+	stop()
+	self.position.y -= offset
 	credits_finished.emit()
