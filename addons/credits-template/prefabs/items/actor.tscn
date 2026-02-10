@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl7epgfgan4nr"]
+
+[ext_resource type="Script" uid="uid://uh01ghii702i" path="res://addons/credits-template/scripts/items/actor.gd" id="1_cpapo"]
+
+[sub_resource type="SystemFont" id="SystemFont_cpapo"]
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_bxnw5"]
+font = SubResource("SystemFont_cpapo")
+font_size = 22
+
+[node name="Actor" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cpapo")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "#ERROR ACTOR"
+label_settings = SubResource("LabelSettings_bxnw5")
