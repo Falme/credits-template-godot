@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://do7gek62mdc4e"]
+
+[ext_resource type="Script" uid="uid://bn0o3mfx6boe3" path="res://addons/credits-template/scripts/credits.gd" id="1_np21v"]
+[ext_resource type="JSON" path="res://addons/credits-template/data/credits.json" id="2_o5f3d"]
+[ext_resource type="Script" uid="uid://p1ad18h0os0e" path="res://addons/credits-template/scripts/staff.gd" id="3_6me0r"]
+[ext_resource type="PackedScene" uid="uid://cm7lkn1487awy" path="res://addons/credits-template/prefabs/items/end.tscn" id="6_nd6c6"]
+[ext_resource type="Resource" uid="uid://0uiuxjau1a3k" path="res://addons/credits-template/resources/item_list.tres" id="6_o5f3d"]
+[ext_resource type="Script" uid="uid://ct2ngwty4tpbv" path="res://addons/credits-template/scripts/pool.gd" id="10_ka0nr"]
+
+[node name="CreditsRoll" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_np21v")
+credits_data = ExtResource("2_o5f3d")
+
+[node name="CreditsStaff" type="VBoxContainer" parent="." node_paths=PackedStringArray("pool")]
+layout_mode = 2
+theme_override_constants/separation = 0
+script = ExtResource("3_6me0r")
+pool = NodePath("../CreditsPool")
+
+[node name="End" parent="." instance=ExtResource("6_nd6c6")]
+layout_mode = 2
+
+[node name="CreditsPool" type="Control" parent="."]
+layout_mode = 2
+script = ExtResource("10_ka0nr")
+pool_items = ExtResource("6_o5f3d")
+
+[connection signal="end_reached" from="End" to="." method="credits_ended"]

@@ -1,1 +1,173 @@
-<svg height="128" width="128" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="124" height="124" rx="14" fill="#363d52" stroke="#212532" stroke-width="4"/><g transform="scale(.101) translate(122 122)"><g fill="#fff"><path d="M105 673v33q407 354 814 0v-33z"/><path fill="#478cbf" d="m105 673 152 14q12 1 15 14l4 67 132 10 8-61q2-11 15-15h162q13 4 15 15l8 61 132-10 4-67q3-13 15-14l152-14V427q30-39 56-81-35-59-83-108-43 20-82 47-40-37-88-64 7-51 8-102-59-28-123-42-26 43-46 89-49-7-98 0-20-46-46-89-64 14-123 42 1 51 8 102-48 27-88 64-39-27-82-47-48 49-83 108 26 42 56 81zm0 33v39c0 276 813 276 813 0v-39l-134 12-5 69q-2 10-14 13l-162 11q-12 0-16-11l-10-65H447l-10 65q-4 11-16 11l-162-11q-12-3-14-13l-5-69z"/><path d="M483 600c3 34 55 34 58 0v-86c-3-34-55-34-58 0z"/><circle cx="725" cy="526" r="90"/><circle cx="299" cy="526" r="90"/></g><g fill="#414042"><circle cx="307" cy="532" r="60"/><circle cx="717" cy="532" r="60"/></g></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (ebf0e940d0, 2025-05-08)"
+   sodipodi:docname="credits_template_logo_128x128.svg"
+   inkscape:export-filename="credits_template_logo.png"
+   inkscape:export-xdpi="384"
+   inkscape:export-ydpi="384"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="0.49640873"
+     inkscape:cx="191.37456"
+     inkscape:cy="121.87537"
+     inkscape:window-width="1071"
+     inkscape:window-height="1022"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <rect
+       x="40.289379"
+       y="46.332787"
+       width="364.6189"
+       height="362.60443"
+       id="rect2" />
+    <rect
+       x="40.289379"
+       y="46.332787"
+       width="364.6189"
+       height="362.60443"
+       id="rect2-7" />
+    <rect
+       x="40.289379"
+       y="46.332787"
+       width="364.6189"
+       height="362.60443"
+       id="rect2-5" />
+    <rect
+       x="40.289379"
+       y="46.332787"
+       width="364.6189"
+       height="362.60443"
+       id="rect2-4" />
+  </defs>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#272e36;fill-opacity:1;stroke-width:0.125"
+       id="rect1"
+       width="128"
+       height="128"
+       x="0"
+       y="0" />
+    <path
+       style="font-size:192px;font-family:'Font Awesome 7 Free';-inkscape-font-specification:'Font Awesome 7 Free';white-space:pre;fill:#8eef97;fill-opacity:1;stroke-width:0.250392"
+       d="m 40.583204,28.293004 c -1.21875,0 -2.25,1.03125 -2.25,2.25 0,1.21875 1.03125,2.25 2.25,2.25 h 13.500001 v 35.250001 c 0,1.21875 1.03125,2.25 2.25,2.25 1.21875,0 2.25,-1.03125 2.25,-2.25 v -35.25 h 13.5 c 1.21875,0 2.25,-1.03125 2.25,-2.25 0,-1.21875 -1.03125,-2.25 -2.25,-2.25 z"
+       id="text1-5"
+       aria-label="T"
+       sodipodi:nodetypes="ssscssscssss" />
+    <g
+       id="g1"
+       transform="scale(0.5)">
+      <g
+         id="g5"
+         clip-path="none"
+         transform="matrix(0.49999999,0,0,0.49999999,10.072344,-13.094049)">
+        <g
+           inkscape:label="Clip"
+           id="g4"
+           style="stroke:none">
+          <path
+             style="font-size:192px;font-family:'Font Awesome 7 Free';-inkscape-font-specification:'Font Awesome 7 Free';white-space:pre;fill:#f63652;fill-opacity:1;stroke-width:1.00157;stroke-linecap:round"
+             d="m 169.28906,119.83203 c -25.5,-25.874999 -66.75,-25.874999 -92.249998,0 -25.125,25.5 -25.125,67.5 0,93 25.499998,25.875 66.749998,25.875 92.249998,0 3.375,-3.375 9,-3.375 12.375,0 3.75,3.75 3.75,9.375 0,13.125 -32.25,32.625 -84.749998,32.625 -116.999998,0 -32.625,-33 -32.625,-86.25 0,-118.875 32.25,-32.999999 84.749998,-32.999999 116.999998,0 3.75,3.375 3.75,9 0,12.75 -3.375,3.375 -9,3.375 -12.375,0 z"
+             id="text1"
+             aria-label="C" />
+        </g>
+      </g>
+      <use
+         x="0"
+         y="0"
+         xlink:href="#g4"
+         id="use5"
+         transform="matrix(0.49999999,0,0,0.49999999,10.072344,-13.094049)" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Camada 2">
+    <path
+       d="m 70.65498,36.375749 c -0.877755,0 -1.620475,0.74272 -1.620475,1.620475 0,0.87776 0.74272,1.62048 1.620475,1.62048 h 22.6867 c 0.87776,0 1.62048,-0.74272 1.62048,-1.62048 0,-0.877755 -0.74272,-1.620475 -1.62048,-1.620475 z"
+       style="font-size:192px;font-family:'Font Awesome 7 Free';-inkscape-font-specification:'Font Awesome 7 Free';white-space:pre;fill:#f63652;fill-opacity:1;stroke-width:0.180473;stroke-dasharray:none"
+       id="path1" />
+    <path
+       d="m 21.007754,101.67735 c -0.877755,0 -1.620476,0.74272 -1.620476,1.62047 0,0.87776 0.742722,1.62048 1.620476,1.62048 h 39.512951 c 0.87776,0 1.62048,-0.74272 1.62048,-1.62048 0,-0.87775 -0.74272,-1.62047 -1.62048,-1.62047 z"
+       style="font-size:192px;font-family:'Font Awesome 7 Free';-inkscape-font-specification:'Font Awesome 7 Free';white-space:pre;fill:#f63652;fill-opacity:1;stroke-width:0.180336"
+       id="path1-4"
+       sodipodi:nodetypes="sssssss" />
+    <path
+       d="m 37.972189,88.26553 c -0.877755,0 -1.620475,0.742725 -1.620475,1.620485 0,0.87776 0.74272,1.62048 1.620475,1.62048 h 65.544051 c 0.87776,0 1.62048,-0.74272 1.62048,-1.62048 0,-0.87776 -0.74272,-1.620485 -1.62048,-1.620485 z"
+       style="font-size:192px;font-family:'Font Awesome 7 Free';-inkscape-font-specification:'Font Awesome 7 Free';white-space:pre;fill:#2f84e3;fill-opacity:1;stroke-width:0.180336"
+       id="path1-6"
+       sodipodi:nodetypes="sssssss" />
+    <path
+       d="m 37.972189,94.97144 c -0.877755,0 -1.620475,0.74272 -1.620475,1.620475 0,0.87776 0.74272,1.62048 1.620475,1.62048 h 54.752396 c 0.877755,0 1.620475,-0.74272 1.620475,-1.62048 0,-0.877755 -0.74272,-1.620475 -1.620475,-1.620475 z"
+       style="font-size:192px;font-family:'Font Awesome 7 Free';-inkscape-font-specification:'Font Awesome 7 Free';white-space:pre;fill:#2f84e3;fill-opacity:1;stroke-width:0.180336"
+       id="path1-77"
+       sodipodi:nodetypes="sssssss" />
+    <path
+       d="m 37.972189,108.38325 c -0.877755,0 -1.620475,0.74272 -1.620475,1.62047 0,0.87776 0.74272,1.62048 1.620475,1.62048 h 36.129896 c 0.87776,0 1.620485,-0.74272 1.620485,-1.62048 0,-0.87775 -0.742725,-1.62047 -1.620485,-1.62047 z"
+       style="font-size:192px;font-family:'Font Awesome 7 Free';-inkscape-font-specification:'Font Awesome 7 Free';white-space:pre;fill:#2f84e3;fill-opacity:1;stroke-width:0.180336"
+       id="path1-2"
+       sodipodi:nodetypes="sssssss" />
+    <path
+       d="m 21.007754,81.55963 c -0.877755,0 -1.620476,0.74272 -1.620476,1.62048 0,0.87776 0.742722,1.62048 1.620476,1.62048 H 68.30875 c 0.87775,0 1.620475,-0.74272 1.620475,-1.62048 0,-0.87776 -0.742725,-1.62048 -1.620475,-1.62048 z"
+       style="font-size:192px;font-family:'Font Awesome 7 Free';-inkscape-font-specification:'Font Awesome 7 Free';white-space:pre;fill:#f63652;fill-opacity:1;stroke-width:0.180336"
+       id="path1-80"
+       sodipodi:nodetypes="sssssss" />
+    <path
+       d="m 80.174705,54.109775 c -0.87776,0 -1.62048,0.74272 -1.62048,1.62048 0,0.877755 0.74272,1.62048 1.62048,1.62048 h 37.984075 c 0.87776,0 1.62048,-0.742725 1.62048,-1.62048 0,-0.87776 -0.74272,-1.62048 -1.62048,-1.62048 z"
+       style="font-size:192px;font-family:'Font Awesome 7 Free';-inkscape-font-specification:'Font Awesome 7 Free';white-space:pre;fill:#2f84e3;fill-opacity:1;stroke-width:0.180336"
+       id="path1-1"
+       sodipodi:nodetypes="sssssss" />
+    <path
+       d="m 80.174705,42.287095 c -0.87776,0 -1.62048,0.742719 -1.62048,1.620474 0,0.877761 0.74272,1.620481 1.62048,1.620481 H 112.8708 c 0.87775,0 1.62048,-0.74272 1.62048,-1.620481 0,-0.877755 -0.74273,-1.620474 -1.62048,-1.620474 z"
+       style="font-size:192px;font-family:'Font Awesome 7 Free';-inkscape-font-specification:'Font Awesome 7 Free';white-space:pre;fill:#2f84e3;fill-opacity:1;stroke-width:0.180336"
+       id="path1-0"
+       sodipodi:nodetypes="sssssss" />
+    <path
+       d="m 70.65498,48.19843 c -0.877755,0 -1.620475,0.74272 -1.620475,1.62048 0,0.87776 0.74272,1.62048 1.620475,1.62048 h 18.217095 c 0.87776,0 1.620485,-0.74272 1.620485,-1.62048 0,-0.87776 -0.742725,-1.62048 -1.620485,-1.62048 z"
+       style="font-size:192px;font-family:'Font Awesome 7 Free';-inkscape-font-specification:'Font Awesome 7 Free';white-space:pre;fill:#f63652;fill-opacity:1;stroke-width:0.180473;stroke-dasharray:none"
+       id="path1-5"
+       sodipodi:nodetypes="sssssss" />
+    <path
+       d="m 80.174705,60.021115 c -0.87776,0 -1.62048,0.74272 -1.62048,1.62048 0,0.87776 0.74272,1.62048 1.62048,1.62048 h 24.952975 c 0.87775,0 1.62048,-0.74272 1.62048,-1.62048 0,-0.87776 -0.74272,-1.62048 -1.62048,-1.62048 z"
+       style="font-size:192px;font-family:'Font Awesome 7 Free';-inkscape-font-specification:'Font Awesome 7 Free';white-space:pre;fill:#2f84e3;fill-opacity:1;stroke-width:0.180336"
+       id="path1-47"
+       sodipodi:nodetypes="sssssss" />
+    <path
+       d="m 80.174705,65.932455 c -0.87776,0 -1.62048,0.74272 -1.62048,1.62048 0,0.87776 0.74272,1.62048 1.62048,1.62048 h 32.129525 c 0.87775,0 1.62047,-0.74272 1.62047,-1.62048 0,-0.87776 -0.74272,-1.62048 -1.62047,-1.62048 z"
+       style="font-size:192px;font-family:'Font Awesome 7 Free';-inkscape-font-specification:'Font Awesome 7 Free';white-space:pre;fill:#2f84e3;fill-opacity:1;stroke-width:0.180336"
+       id="path1-29"
+       sodipodi:nodetypes="sssssss" />
+    <path
+       d="m 80.174705,71.8438 c -0.87776,0 -1.62048,0.74272 -1.62048,1.620475 0,0.87776 0.74272,1.62048 1.62048,1.62048 h 28.981915 c 0.87775,0 1.62048,-0.74272 1.62048,-1.62048 0,-0.877755 -0.74273,-1.620475 -1.62048,-1.620475 z"
+       style="font-size:192px;font-family:'Font Awesome 7 Free';-inkscape-font-specification:'Font Awesome 7 Free';white-space:pre;fill:#2f84e3;fill-opacity:1;stroke-width:0.180336"
+       id="path1-31"
+       sodipodi:nodetypes="sssssss" />
+  </g>
+</svg>
