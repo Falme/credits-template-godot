@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b7wlj4qgyyyah"]
 
-[ext_resource type="Script" uid="uid://v7ltveec5rcg" path="res://credits-template/scripts/items/category.gd" id="1_7sfkd"]
+[ext_resource type="Script" uid="uid://v7ltveec5rcg" path="res://addons/credits-template/scripts/items/category.gd" id="1_7sfkd"]
 
 [sub_resource type="SystemFont" id="SystemFont_7sfkd"]
 subpixel_positioning = 0

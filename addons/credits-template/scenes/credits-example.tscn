@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c2jaag5vu5uu1"]
 
-[ext_resource type="Texture2D" uid="uid://dnxck3c6rii36" path="res://credits-template/sprites/mixtapes.png" id="1_21mbh"]
-[ext_resource type="PackedScene" uid="uid://do7gek62mdc4e" path="res://credits-template/prefabs/credits.tscn" id="2_utq03"]
+[ext_resource type="Texture2D" uid="uid://dnxck3c6rii36" path="res://addons/credits-template/sprites/mixtapes.png" id="1_21mbh"]
+[ext_resource type="PackedScene" uid="uid://do7gek62mdc4e" path="res://addons/credits-template/prefabs/credits.tscn" id="2_utq03"]
 
 [sub_resource type="Gradient" id="Gradient_utq03"]
 colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 1)

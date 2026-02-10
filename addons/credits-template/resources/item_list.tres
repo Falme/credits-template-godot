@@ -1,12 +1,12 @@
 [gd_resource type="Resource" script_class="CT_Item_List" load_steps=13 format=3 uid="uid://0uiuxjau1a3k"]
 
-[ext_resource type="Script" uid="uid://dmogrs8dkli1s" path="res://credits-template/scripts/pool_item.gd" id="1_6rbvu"]
-[ext_resource type="PackedScene" uid="uid://dh2nk4w2xadb7" path="res://credits-template/prefabs/items/title.tscn" id="2_gjq6l"]
-[ext_resource type="Script" uid="uid://c0dau127wtjj8" path="res://credits-template/resources/item_list.gd" id="2_tcdt7"]
-[ext_resource type="PackedScene" uid="uid://b7wlj4qgyyyah" path="res://credits-template/prefabs/items/category.tscn" id="3_fs2xl"]
-[ext_resource type="PackedScene" uid="uid://bl7epgfgan4nr" path="res://credits-template/prefabs/items/actor.tscn" id="4_hyois"]
-[ext_resource type="PackedScene" uid="uid://dxmwoaqjqswpl" path="res://credits-template/prefabs/items/image.tscn" id="5_oxblb"]
-[ext_resource type="PackedScene" uid="uid://c7jyj5f0o3eeh" path="res://credits-template/prefabs/items/spacing.tscn" id="6_1gim7"]
+[ext_resource type="Script" uid="uid://dmogrs8dkli1s" path="res://addons/credits-template/scripts/pool_item.gd" id="1_6rbvu"]
+[ext_resource type="PackedScene" uid="uid://dh2nk4w2xadb7" path="res://addons/credits-template/prefabs/items/title.tscn" id="2_gjq6l"]
+[ext_resource type="Script" uid="uid://c0dau127wtjj8" path="res://addons/credits-template/resources/item_list.gd" id="2_tcdt7"]
+[ext_resource type="PackedScene" uid="uid://b7wlj4qgyyyah" path="res://addons/credits-template/prefabs/items/category.tscn" id="3_fs2xl"]
+[ext_resource type="PackedScene" uid="uid://bl7epgfgan4nr" path="res://addons/credits-template/prefabs/items/actor.tscn" id="4_hyois"]
+[ext_resource type="PackedScene" uid="uid://dxmwoaqjqswpl" path="res://addons/credits-template/prefabs/items/image.tscn" id="5_oxblb"]
+[ext_resource type="PackedScene" uid="uid://c7jyj5f0o3eeh" path="res://addons/credits-template/prefabs/items/spacing.tscn" id="6_1gim7"]
 
 [sub_resource type="Resource" id="Resource_8ypmv"]
 script = ExtResource("1_6rbvu")

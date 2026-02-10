@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dxmwoaqjqswpl"]
 
-[ext_resource type="Texture2D" uid="uid://dun1nnulpp4us" path="res://credits-template/sprites/failsafe.png" id="1_3bnl7"]
-[ext_resource type="Script" uid="uid://dx23wrgnaqjq" path="res://credits-template/scripts/items/image.gd" id="2_3bnl7"]
+[ext_resource type="Texture2D" uid="uid://dun1nnulpp4us" path="res://addons/credits-template/sprites/failsafe.png" id="1_3bnl7"]
+[ext_resource type="Script" uid="uid://dx23wrgnaqjq" path="res://addons/credits-template/scripts/items/image.gd" id="2_3bnl7"]
 
 [node name="Image" type="VBoxContainer"]
 script = ExtResource("2_3bnl7")

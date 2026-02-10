@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dun1nnulpp4us"
-path="res://.godot/imported/failsafe.png-14fbe518e06ec71e88392c7a0398cbf2.ctex"
+uid="uid://dnxck3c6rii36"
+path="res://.godot/imported/mixtapes.png-8e0e8c73f7a1c78ca33a62d201a04588.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://credits-template/sprites/failsafe.png"
-dest_files=["res://.godot/imported/failsafe.png-14fbe518e06ec71e88392c7a0398cbf2.ctex"]
+source_file="res://addons/credits-template/sprites/mixtapes.png"
+dest_files=["res://.godot/imported/mixtapes.png-8e0e8c73f7a1c78ca33a62d201a04588.ctex"]
 
 [params]
 
