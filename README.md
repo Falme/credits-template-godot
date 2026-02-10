@@ -1,101 +1,97 @@
-[README EN-US](https://github.com/Falme/credits-template-godot/blob/main/README_EN-US.md) 👈
+[README PT-BR](./README_PT-BR.md) 👈
 
 [Unity3D Edition](https://github.com/Falme/credits-template-unity) 👈
 
 # Credits Template : Godot Edition
 
-Template para a interface de créditos para seu jogo (na Godot Engine) com as informações carregadas pelo JSON.
+A Template of Credits Interface for your game (in Godot Engine) with the informations being loaded from a JSON.
 
 ---
 
-## Motivos?
+## Why?
 
-Todo jogo deveria ter uma tela de créditos, mesmo que o jogo tenha sido desenvolvido por uma única pessoa, os criadores da obra devem ser registrados. O problema é que sempre precisamos criar uma nova cena para os créditos em cada jogo, e a tela de créditos é sempre diferente, porque cada jogo é diferente.
+Every game should have a credits screen, even if the game was developed by one person, the creators of the media should be credited. The problem is that we always need to create a new scene for credits in each game, and the credits screen is always different, because each game is different.
 
-Assim, tendo isso em mente, não criei uma cena propriamente dita para os créditos, mas sim um modelo de interface dos créditos prontos para uso.
+So, with that in mind, I didn't create a proper scene for the credits, but an interface template for easy ready-to-go credits.
 
-## Como Começar?
+## Quickstart
 
-Baixe o arquivo `credits-godot-x-x-x.zip` mais recente na [Página de Releases](https://github.com/Falme/credits-template-godot/releases) e extraia para a pasta `res://` do seu projeto Godot.
+Download the latest `credits-godot-x-x-x.zip` at the [Releases Page](https://github.com/Falme/credits-template-godot/releases) and extract it to the `res://` folder in your Godot project.
 
-Você deverá ter uma nova pasta no seguinte caminho: `res://credits-template`.
+You should have a new folder in the following path: `res://addons/credits-template` .
 
-Agora, se você quiser um exemplo de como funciona, tenho uma cena em `credits-template/scenes/credits-example.tscn` (caso prefira aprender por meio de exemplos).
+Now, if you want an example of how it works, I have a scene at `credits-template/scenes/credits-example.tscn` (if you prefer to learn by example).
 
-De qualquer forma, o modelo pode ser encontrado em `credits-template/prefabs/credits.tscn`, este é o modelo principal. Para usá-lo, basta adicioná-lo como filho de um node Control, pois o modelo é 100% herdado da interface/Control.
+Either way, the template can be found at `credits-template/prefabs/credits.tscn`, this is the main template. To use it, just add it as a child of a Control node, because the template is 100% interface/Control herited.
 
-Para alterar o conteúdo dos créditos, você precisará modificar o arquivo JSON em `credits-template/data/credits.json`. Decidi colocar as informações em um arquivo JSON para que não apenas os desenvolvedores, mas qualquer membro da equipe, possa modificá-lo.
+To change the content in the credits roll, you will need to change the JSON file at `credits-template/data/credits.json`. I decided to put the information in a json file, so not only the devs could modify the file, but anyone from the team.
 
-Para explicar rapidamente cada campo:
+The next section we will be explaining in more details the JSON structure.
 
-- title: Título dos créditos, normalmente o nome do jogo
-- category: Categoria ou nome da função (exemplo: Produtores)
-- actors: Nome da pessoa a ser listada (exemplo: Jane Doe)
-- spacing: Margem/espaço entre nomes e funções
-- image: Imagens no meio dos créditos, como logos e fotos.
+## JSON Structure
 
-Na próxima seção, explicaremos em mais detalhes a estrutura JSON.
-
-## Estrutura JSON
-
-Vou escrever um exemplo de créditos e explicar cada um deles com mais detalhes.
+I will write down an example of credits, and explain with more details each one of them.
 
 ```json
 {
-	"version": "0.1.0",
+	"version": "0.0.1",
 	"velocity": 100.0,
-	"title": "Super Jump Game 2: \nThe Electric Boogaloo",
 	"items": [
 		{
-			"image": true,
-			"path": "credits-template/sprites/example_image.png",
-			"height": 400.0
+			"type": "title",
+			"text": "Super Jump Game 2: \nThe Electric Boogaloo"
 		},
 		{
-			"space": true,
-			"height": 400.0
+			"type": "space",
+			"height": 100.0
 		},
 		{
-			"category": true,
-			"text": "Director",
-			"categorySpacing": 100.0,
-			"actorsSpacing": 50.0,
+			"type": "image", 
+			"path": "sprites/example_image.png", 
+			"height": 400
+		},
+		{
+			"type": "category",
+			"text": "Created By"
+		},
+		{
+			"type": "actor",
 			"actors": [
-				"John Doe",
-				"Jane Doe",
-				"Oscar Garlic"
+				"Falme Streamless"
 			]
 		},
 		{
-			"space": true,
-			"height": 200.0
+			"type": "space",
+			"height": 100.0
 		},
 		{
-			"category": true,
-			"text": "Producers",
-			"categorySpacing": 100.0,
-			"actorsSpacing": 10.0,
+			"type": "category",
+			"text": "Special Thanks"
+		},
+		{
+			"type": "actor",
 			"actors": [
-				"John Doe",
-				"Jane Doe",
-				"Oscar Garlic"
+				"Alex Arroyo",
+				"Danilo Cavedon",
+				"Ruan Lima",
+				"And everyone who shared this project!"
 			]
 		}
 	]
 }
 ```
 
-Explicaremos cada campo de cima para baixo.
+From top to bottom, we will explain each field.
 
-- velocity: Velocidade de rolagem dos créditos, velocidade de movimento
-- title: Primeiro campo dos créditos, normalmente o nome do jogo
-- items: Array contendo todos os objetos que podem ser adicionados aos créditos
-	- image: Uma imagem para ser adicionada aos créditos
-		- path: Endereço/caminho para a imagem (base é "res://")
-		- height: altura da imagem a ser exibida. A largura é proporcional ao tamanho original.
-    - space: espaço vazio, uma margem entre uma label e outra label
-		- height: altura do espaço a ser exibido
-    - category: o título do cargo
-		- categorySpacing: Espaço vazio entre o cargo e os nomes
-		- actorsSpacing: Espaço vazio entre os nomes e nomes
-		- actors: Nomes daqueles que trabalharam no projeto na função especificada acima.
+- version : If you want to track the credits version for your game (doesn't show on screen)
+- velocity : Velocity of the credits scrolling, speed of movement
+- items : Array of each item object that can be added to the credits
+	- title : Special text, usually first field of credits and normally the name of the game
+	- image : An image to be added to the credits
+		- path : Address/path to the image (base is "res://")
+		- height : height of the image to be displayed, width is proportional to the original size
+    - space : empty space, a margin between a label and other label
+		- height : height of the space to be displayed
+    - category : the role title
+	- actor : Names, those who worked in the project at the specified role above
+		- actors : Array of names, try not putting too many names in one array, divide for better performance
