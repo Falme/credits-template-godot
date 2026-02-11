@@ -12,7 +12,7 @@
 		},
 		{
 			"type": "image",
-			"path": "credits-template/sprites/example_image.png",
+			"path": "addons/credits-template/sprites/example_image.png",
 			"height": 400.0
 		},
 		{
