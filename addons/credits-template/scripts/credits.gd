@@ -25,8 +25,7 @@ func _process(delta: float) -> void:
 
 
 func move_scroll_to_start() -> void:
-	self.position.y = DisplayServer.screen_get_size().y
-
+	self.position.y = get_viewport().size.y
 
 func start() -> void:
 	_is_scrolling = true

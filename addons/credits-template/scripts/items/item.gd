@@ -25,7 +25,7 @@ func has_passed_top_border() -> bool:
 
 
 func has_passed_bottom_border() -> bool:
-	return global_position.y <= DisplayServer.screen_get_size().y
+	return global_position.y <= get_viewport().size.y
 
 
 func has_errors(_item: Dictionary) -> bool:
