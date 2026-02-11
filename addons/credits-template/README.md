@@ -18,6 +18,8 @@ So, with that in mind, I didn't create a proper scene for the credits, but an in
 
 Download the latest `credits-godot-x-x-x.zip` at the [Releases Page](https://github.com/Falme/credits-template-godot/releases) and extract it to the `res://` folder in your Godot project.
 
+Alternatively, now you can download the template directly from the [Godot Asset Library](https://godotengine.org/asset-library/asset/4753) by the name `Credits Template` at the tools section.
+
 You should have a new folder in the following path: `res://addons/credits-template` .
 
 Now, if you want an example of how it works, I have a scene at `credits-template/scenes/credits-example.tscn` (if you prefer to learn by example).

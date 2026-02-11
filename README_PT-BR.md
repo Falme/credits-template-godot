@@ -18,6 +18,8 @@ Assim, tendo isso em mente, não criei uma cena propriamente dita para os crédi
 
 Baixe o arquivo `credits-godot-x-x-x.zip` mais recente na [Página de Releases](https://github.com/Falme/credits-template-godot/releases) e extraia para a pasta `res://` do seu projeto Godot.
 
+Alternativamente, agora você pode baixar o modelo diretamente do [Godot Asset Library](https://godotengine.org/asset-library/asset/4753) com o nome `Credits Template` na seção tools.
+
 Você deverá ter uma nova pasta no seguinte caminho: `res://addons/credits-template`.
 
 Agora, se você quiser um exemplo de como funciona, tenho uma cena em `credits-template/scenes/credits-example.tscn` (caso prefira aprender por meio de exemplos).
