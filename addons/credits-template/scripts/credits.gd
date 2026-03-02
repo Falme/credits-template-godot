@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 
 
 func move_scroll_to_start() -> void:
-	self.position.y = DisplayServer.screen_get_size().y
+	self.position.y = get_viewport_rect().size.y
 
 
 func start() -> void:
@@ -41,7 +41,7 @@ func add_scroll(_y: float) -> void:
 
 
 func set_scroll_velocity(velocity: float) -> void:
-	self._velocity = velocity
+	self._velocity = max(0.001, velocity)
 
 
 func credits_ended(offset: float) -> void:

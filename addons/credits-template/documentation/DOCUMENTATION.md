@@ -9,6 +9,8 @@
 3. Drag and Drop the node at `res://addons/credits-template/prefabs/credits.tscn` to your scene or into a predefined Control node
 	- ![Drag_and_drop_to_scene](./credits-template-doc-1.jpeg)
 
+You can, also, download the project from [Godot Asset Library](https://godotengine.org/asset-library/asset/4753). From the Godot Engine AssetLib.
+
 ## Configurations
 
 All the configurations is predefined into the node OR can be modified in the JSON data found at `res://addons/credits-template/data/credits.json`.

@@ -7,7 +7,7 @@ func initialize(item : Dictionary) -> void:
 		return
 
 	_set_texture(item.path)
-	_set_height(item.height)
+	_set_height(item.height, $Sprite)
 
 
 func _set_texture(path: String) -> void:
@@ -20,8 +20,8 @@ func _set_texture(path: String) -> void:
 	$Sprite.texture = loaded_file
 
 
-func _set_height(height: float) -> void:
-	$Sprite.custom_minimum_size.y = max(0, height)
+func _set_height(height: float, sprite: TextureRect) -> void:
+	sprite.custom_minimum_size.y = max(0, height)
 
 
 func has_errors(item: Dictionary) -> bool:
@@ -29,8 +29,16 @@ func has_errors(item: Dictionary) -> bool:
 		printerr("Credits Template : item requires a field 'path'!")
 		return true
 
+	if item.path is not String:
+		printerr("Credits Template : field 'path' must be a String!")
+		return true
+
 	if not item.has("height"):
 		printerr("Credits Template : item requires a field 'height'!")
+		return true
+
+	if (item.height is not float) and (item.height is not int):
+		printerr("Credits Template : field 'height' must be a Number!")
 		return true
 
 	return false
