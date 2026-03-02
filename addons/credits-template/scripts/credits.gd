@@ -41,7 +41,7 @@ func add_scroll(_y: float) -> void:
 
 
 func set_scroll_velocity(velocity: float) -> void:
-	self._velocity = velocity
+	self._velocity = max(0.001, velocity)
 
 
 func credits_ended(offset: float) -> void:
