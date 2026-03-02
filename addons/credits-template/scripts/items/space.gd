@@ -6,7 +6,11 @@ func initialize(item : Dictionary) -> void:
 	if has_errors(item):
 		return
 
-	$Space.custom_minimum_size.y = item.height
+	set_height(item.height, $Space)
+
+
+func set_height(height: float, spacing: Control) -> void:
+	spacing.custom_minimum_size.y = max(0, height)
 
 
 func has_errors(item: Dictionary) -> bool:
