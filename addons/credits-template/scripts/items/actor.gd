@@ -6,8 +6,7 @@ func initialize(item: Dictionary) -> void:
 	if has_errors(item):
 		return
 	
-	var actors : Array = item.actors
-	$Label.text = '\n'.join(actors)
+	$Label.text = join_actors_array(item.actors)
 
 
 func has_errors(item: Dictionary) -> bool:
@@ -15,4 +14,12 @@ func has_errors(item: Dictionary) -> bool:
 		printerr("Credits Template : item requires an array field 'actors'!")
 		return true
 
+	if item.actors is not Array:
+		printerr("Credits Template : item requires an array field in 'actors'!")
+		return true
+
 	return false
+
+
+func join_actors_array(_array: Array) -> String:
+	return '\n'.join(_array)
