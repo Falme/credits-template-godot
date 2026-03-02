@@ -14,4 +14,8 @@ func has_errors(item: Dictionary) -> bool:
 		printerr("Credits Template : item requires a field 'height'!")
 		return true
 
+	if (item.height is not float) and (item.height is not int):
+		printerr("Credits Template : field 'height' must be a number!")
+		return true
+
 	return false
